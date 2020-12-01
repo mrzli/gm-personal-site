@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-export function App() {
+export function App(): React.ReactElement {
   return (
     <div>
-      <h1>Hello React</h1>
+      <h1>{'Hello React'}</h1>
     </div>
   );
 }
