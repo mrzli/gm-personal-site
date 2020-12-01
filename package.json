@@ -2,6 +2,8 @@
   "name": "gm-personal-site",
   "version": "0.1.0",
   "private": true,
+  "description": "Personal site for myself.",
+  "author": "Goran Mržljak <goran.mrzljak@gmail.com>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -34,5 +36,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrzli/gm-personal-site"
+  },
+  "bugs": {
+    "url": "https://github.com/mrzli/gm-personal-site/issues"
+  },
+  "engines": {
+    "node": "15.2.1",
+    "npm": "7.0.14"
   }
 }
