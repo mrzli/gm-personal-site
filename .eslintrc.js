@@ -11,6 +11,8 @@ module.exports = {
     "plugin:react/all"
   ],
   rules: {
+    // eslint - best practices
+    "no-else-return": "off",
     // eslint - variables
     "no-undefined": "off",
     // eslint - best practices
@@ -21,6 +23,7 @@ module.exports = {
     "function-call-argument-newline": ["error", "consistent"],
     "function-paren-newline": ["error", "consistent"],
     "indent": ["error", 2],
+    "max-params": ["error", 8],
     "multiline-comment-style": "off",
     "object-curly-spacing": ["error", "always"],
     "one-var": ["error", "never"],
