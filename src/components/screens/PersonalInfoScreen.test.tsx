@@ -2,12 +2,12 @@ import React from 'react';
 import { testAppRender } from '../../test-utils/app-test-utils';
 import { createTestAppContextData } from '../../test-utils/test-data';
 import { screen } from '@testing-library/react';
-import { SectionsScreen } from './SectionsScreen';
+import { PersonalInfoScreen } from './PersonalInfoScreen';
 
-describe('<SectionsScreen/>', () => {
+describe('<PersonalInfoScreen/>', () => {
   it('renders', () => {
-    testAppRender(<SectionsScreen />, createTestAppContextData(), '/');
-    const textElement = screen.getByText(/SectionsScreen/);
+    testAppRender(<PersonalInfoScreen />, createTestAppContextData(), '/');
+    const textElement = screen.getByText(/PersonalInfoScreen/);
     expect(textElement).toBeInTheDocument();
   });
 });

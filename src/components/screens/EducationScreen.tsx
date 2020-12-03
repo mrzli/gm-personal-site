@@ -7,5 +7,5 @@ interface EducationPageProps {
 export function EducationScreen(
   props: EducationPageProps
 ): React.ReactElement {
-  return (<div>{'EducationPage'}</div>);
+  return (<div>{'EducationScreen'}</div>);
 }
