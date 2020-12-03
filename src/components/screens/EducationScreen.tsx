@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface EducationScreenProps {
+interface EducationPageProps {
 
 }
 
 export function EducationScreen(
-  props: EducationScreenProps
+  props: EducationPageProps
 ): React.ReactElement {
-  return (<div>EducationScreen</div>);
+  return (<div>{'EducationPage'}</div>);
 }

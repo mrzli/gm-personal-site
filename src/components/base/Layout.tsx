@@ -7,5 +7,5 @@ interface LayoutProps {
 export function Layout(
   props: LayoutProps
 ): React.ReactElement {
-  return (<div>Layout</div>);
+  return (<div>{'Layout'}</div>);
 }

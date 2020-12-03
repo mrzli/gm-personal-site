@@ -7,5 +7,5 @@ interface ProsAndConsScreenProps {
 export function ProsAndConsScreen(
   props: ProsAndConsScreenProps
 ): React.ReactElement {
-  return (<div>ProsAndConsScreen</div>);
+  return (<div>{'ProsAndConsScreen'}</div>);
 }

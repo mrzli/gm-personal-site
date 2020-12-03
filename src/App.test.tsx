@@ -1,9 +1,13 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { App } from './App';
+import { testAppRender } from './test-utils/app-test-utils';
+import { createTestAppContextData } from './test-utils/test-data';
 
-it('renders hello react', () => {
-  render(<App />);
-  const textElement = screen.getByText(/Hello React/i);
-  expect(textElement).toBeInTheDocument();
+describe('<App/>', () => {
+  it('renders hello react', () => {
+    testAppRender(<App />, createTestAppContextData(), '/');
+    const textElement = screen.getByText(/Hello React/i);
+    expect(textElement).toBeInTheDocument();
+  });
 });

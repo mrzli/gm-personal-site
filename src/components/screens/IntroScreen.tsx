@@ -7,5 +7,5 @@ interface IntroScreenProps {
 export function IntroScreen(
   props: IntroScreenProps
 ): React.ReactElement {
-  return (<div>IntroScreen</div>);
+  return (<div>{'IntroScreen'}</div>);
 }

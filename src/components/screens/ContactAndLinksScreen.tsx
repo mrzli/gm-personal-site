@@ -7,5 +7,5 @@ interface ContactAndLinksScreenProps {
 export function ContactAndLinksScreen(
   props: ContactAndLinksScreenProps
 ): React.ReactElement {
-  return (<div>ContactAndLinksScreen</div>);
+  return (<div>{'ContactAndLinksScreen'}</div>);
 }

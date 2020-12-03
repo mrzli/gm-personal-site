@@ -7,5 +7,5 @@ interface SectionsScreenProps {
 export function SectionsScreen(
   props: SectionsScreenProps
 ): React.ReactElement {
-  return (<div>SectionsScreen</div>);
+  return (<div>{'SectionsScreen'}</div>);
 }

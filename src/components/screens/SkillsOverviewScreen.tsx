@@ -7,5 +7,5 @@ interface SkillsOverviewScreenProps {
 export function SkillsOverviewScreen(
   props: SkillsOverviewScreenProps
 ): React.ReactElement {
-  return (<div>SkillsOverviewScreen</div>);
+  return (<div>{'SkillsOverviewScreen'}</div>);
 }

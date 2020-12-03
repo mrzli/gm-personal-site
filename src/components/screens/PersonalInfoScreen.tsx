@@ -7,5 +7,5 @@ interface PersonalInfoScreenProps {
 export function PersonalInfoScreen(
   props: PersonalInfoScreenProps
 ): React.ReactElement {
-  return (<div>PersonalInfoScreen</div>);
+  return (<div>{'PersonalInfoScreen'}</div>);
 }

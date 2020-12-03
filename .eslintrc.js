@@ -51,6 +51,8 @@ module.exports = {
         "format": ["StrictPascalCase", "strictCamelCase"]
       }
     ],
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/no-extra-parens": "off",
     "@typescript-eslint/prefer-readonly-parameter-types": "off",
     "@typescript-eslint/quotes": ["error", "single"],
     "@typescript-eslint/space-before-function-paren": [
@@ -63,6 +65,7 @@ module.exports = {
     ],
 
     // react
+    "react/jsx-boolean-value": ["error", "always"],
     "react/jsx-curly-brace-presence": [
       "error",
       {
@@ -78,6 +81,12 @@ module.exports = {
       }
     ],
     "react/jsx-indent": ["error", 2],
+    "react/jsx-max-props-per-line": [
+      "error",
+      {
+        "when": "multiline"
+      }
+    ],
     "react/jsx-one-expression-per-line": [
       "error",
       {
