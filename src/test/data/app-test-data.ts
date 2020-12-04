@@ -1,6 +1,6 @@
-import { AppContextData } from '../app-setup/app-context';
-import { AppGlobals } from '../app-setup/app-globals';
-import { AppEnv } from '../app-setup/app-env';
+import { AppContextData } from '../../app-setup/app-context';
+import { AppGlobals } from '../../app-setup/app-globals';
+import { AppEnv } from '../../app-setup/app-env';
 
 export function createTestAppContextData(): AppContextData {
   return {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import { App } from './App';
-import { testAppRender } from './test-utils/app-test-utils';
-import { createTestAppContextData } from './test-utils/test-data';
+import { testAppRender } from './test/utils/app-test-utils';
+import { createTestAppContextData } from './test/data/app-test-data';
 
 describe('<App/>', () => {
   it('renders hello react', () => {

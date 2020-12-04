@@ -1,10 +1,10 @@
 import React from 'react';
 import { Header } from './Header';
-import { createTestAppContextData } from '../../test-utils/test-data';
-import { testAppRender } from '../../test-utils/app-test-utils';
+import { createTestAppContextData } from '../../test/data/app-test-data';
+import { testAppRender } from '../../test/utils/app-test-utils';
 import { HeaderData } from '../../types/header-data';
 import { RenderResult, screen } from '@testing-library/react';
-import { createMatchMedia } from '../../test-utils/test-utils';
+import { createMatchMedia } from '../../test/utils/test-utils';
 import userEvent from '@testing-library/user-event';
 import { Route, Switch } from 'react-router-dom';
 

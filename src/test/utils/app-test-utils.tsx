@@ -3,9 +3,9 @@ import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import {
   createAppMuiTheme,
   wrapWithTheme
-} from '../app-setup/create-app-mui-theme';
-import { AppContextData } from '../app-setup/app-context';
-import { wrapComponent } from '../app-setup/create-app-utils';
+} from '../../app-setup/create-app-mui-theme';
+import { AppContextData } from '../../app-setup/app-context';
+import { wrapComponent } from '../../app-setup/create-app-utils';
 
 export function testAppRender(
   component: React.ReactElement,
