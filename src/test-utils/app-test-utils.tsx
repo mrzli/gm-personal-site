@@ -24,7 +24,7 @@ export function testAppRender(
 function testComponentWrapper(
   component: React.ReactElement,
   appContextValue: AppContextData,
-  initialLocationForTest: string
+  initialLocationForMemoryRouter: string
 ): React.ReactElement {
   const theme = createAppMuiTheme();
   return wrapComponent(
@@ -32,7 +32,7 @@ function testComponentWrapper(
     appContextValue,
     theme,
     true,
-    initialLocationForTest
+    initialLocationForMemoryRouter
   );
 }
 
