@@ -14,57 +14,55 @@ export function Header(props: HeaderProps): React.ReactElement {
 
   return (
     <header>
-      <Box fontSize={'1.8em'} color={'text.primary'}>
-        <Grid container={true}>
-          <Grid item={true} xs={4}>
-            {previousData && (
-              <Link
-                to={previousData.link}
-                role={'navigation'}
-                aria-label={'previous'}
-              >
+      <nav>
+        <Box fontSize={'1.8em'} color={'text.primary'}>
+          <Grid container={true}>
+            <Grid item={true} xs={4}>
+              {previousData && (
+                <Link to={previousData.link} aria-label={'previous'}>
+                  <Grid
+                    container={true}
+                    spacing={1}
+                    alignItems={'center'}
+                    justify={'center'}
+                  >
+                    <SvgIcon component={ArrowLeftBox} fontSize={'large'} />
+                    <Hidden smDown={true}>{previousData.text}</Hidden>
+                  </Grid>
+                </Link>
+              )}
+            </Grid>
+            <Grid item={true} xs={4}>
+              <Link to={'/'} aria-label={'up'}>
                 <Grid
                   container={true}
                   spacing={1}
                   alignItems={'center'}
                   justify={'center'}
                 >
-                  <SvgIcon component={ArrowLeftBox} fontSize={'large'} />
-                  <Hidden smDown={true}>{previousData.text}</Hidden>
+                  <SvgIcon component={ArrowUpBox} fontSize={'large'} />
+                  <Hidden smDown={true}>{'Sections'}</Hidden>
                 </Grid>
               </Link>
-            )}
+            </Grid>
+            <Grid item={true} xs={4}>
+              {nextData && (
+                <Link to={nextData.link} aria-label={'next'}>
+                  <Grid
+                    container={true}
+                    spacing={1}
+                    alignItems={'center'}
+                    justify={'center'}
+                  >
+                    <Hidden smDown={true}>{nextData.text}</Hidden>
+                    <SvgIcon component={ArrowRightBox} fontSize={'large'} />
+                  </Grid>
+                </Link>
+              )}
+            </Grid>
           </Grid>
-          <Grid item={true} xs={4}>
-            <Link to={'/'} role={'navigation'} aria-label={'up'}>
-              <Grid
-                container={true}
-                spacing={1}
-                alignItems={'center'}
-                justify={'center'}
-              >
-                <SvgIcon component={ArrowUpBox} fontSize={'large'} />
-                <Hidden smDown={true}>{'Sections'}</Hidden>
-              </Grid>
-            </Link>
-          </Grid>
-          <Grid item={true} xs={4}>
-            {nextData && (
-              <Link to={nextData.link} role={'navigation'} aria-label={'next'}>
-                <Grid
-                  container={true}
-                  spacing={1}
-                  alignItems={'center'}
-                  justify={'center'}
-                >
-                  <SvgIcon component={ArrowRightBox} fontSize={'large'} />
-                  <Hidden smDown={true}>{nextData.text}</Hidden>
-                </Grid>
-              </Link>
-            )}
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
+      </nav>
     </header>
   );
 }

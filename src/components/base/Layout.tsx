@@ -14,13 +14,13 @@ type ClassKey = 'root';
 function stylesCallback(theme: Theme): StyleRules<ClassKey, LayoutProps> {
   return createStyles<ClassKey, LayoutProps>({
     root: {
-      [theme.breakpoints.down('xs')]: {
+      [theme.breakpoints.down('sm')]: {
         maxWidth: '100%'
       },
-      [theme.breakpoints.only('sm')]: {
+      [theme.breakpoints.only('md')]: {
         maxWidth: 900
       },
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('lg')]: {
         maxWidth: 1200
       }
     }
@@ -34,7 +34,9 @@ export function Layout(props: LayoutProps): React.ReactElement {
   return (
     <Container className={classes.root}>
       {getHeaderElement(location)}
-      <ScreenRoutes />
+      <main>
+        <ScreenRoutes />
+      </main>
     </Container>
   );
 }

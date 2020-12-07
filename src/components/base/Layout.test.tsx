@@ -10,12 +10,12 @@ describe('<Layout/>', () => {
   it('renders sections', () => {
     testAppRender(<Layout />, createTestAppContextData(), '/');
     expect(
-      screen.queryByRole('navigation', { name: /up/i })
+      screen.queryByRole('link', { name: /up/i })
     ).not.toBeInTheDocument();
     expect(screen.queryByText('SectionsScreen')).toBeInTheDocument();
   });
 
-  describe('section navigation', () => {
+  describe('section link', () => {
     APP_SECTIONS_TEST_DATA.forEach((appSectionTestData, index) => {
       describe(appSectionTestData.name, () => {
         if (index === 0) {
@@ -27,7 +27,7 @@ describe('<Layout/>', () => {
             );
 
             expect(
-              screen.queryByRole('navigation', { name: /previous/i })
+              screen.queryByRole('link', { name: /previous/i })
             ).not.toBeInTheDocument();
           });
         } else {
@@ -40,7 +40,7 @@ describe('<Layout/>', () => {
               appSectionTestData.url
             );
 
-            const previousLink = screen.getByRole('navigation', {
+            const previousLink = screen.getByRole('link', {
               name: /previous/i
             });
             userEvent.click(previousLink);
@@ -58,7 +58,7 @@ describe('<Layout/>', () => {
               appSectionTestData.url
             );
 
-            const nextLink = screen.getByRole('navigation', {
+            const nextLink = screen.getByRole('link', {
               name: /next/i
             });
             userEvent.click(nextLink);
@@ -73,16 +73,21 @@ describe('<Layout/>', () => {
             );
 
             expect(
-              screen.queryByRole('navigation', { name: /next/i })
+              screen.queryByRole('link', { name: /next/i })
             ).not.toBeInTheDocument();
           });
         }
 
         it('up link navigates to sections', () => {
-          const upLink = screen.getByRole('navigation', {
+          testAppRender(
+            <Layout />,
+            createTestAppContextData(),
+            appSectionTestData.url
+          );
+
+          const upLink = screen.getByRole('link', {
             name: /up/i
           });
-          const links = screen.queryByRole('navigation');
           userEvent.click(upLink);
           expect(screen.queryByText('SectionsScreen')).toBeInTheDocument();
         });

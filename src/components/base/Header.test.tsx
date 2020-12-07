@@ -44,12 +44,12 @@ describe('<Header/>', () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
     expect(
-      screen.getByRole('navigation', { name: /previous/i })
+      screen.getByRole('link', { name: /previous/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('navigation', { name: /next/i })
+      screen.getByRole('link', { name: /next/i })
     ).toBeInTheDocument();
-    expect(screen.getByRole('navigation', { name: /up/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /up/i })).toBeInTheDocument();
   });
 
   it('render without previous/next', () => {
@@ -59,18 +59,18 @@ describe('<Header/>', () => {
     });
 
     expect(
-      screen.queryByRole('navigation', { name: /previous/i })
+      screen.queryByRole('link', { name: /previous/i })
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByRole('navigation', { name: /next/i })
+      screen.queryByRole('link', { name: /next/i })
     ).not.toBeInTheDocument();
-    expect(screen.getByRole('navigation', { name: /up/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /up/i })).toBeInTheDocument();
   });
 
   it("Click 'Previous' navigates to previous page", () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
-    const previousLink = screen.getByRole('navigation', {
+    const previousLink = screen.getByRole('link', {
       name: /previous/i
     });
     userEvent.click(previousLink);
@@ -80,7 +80,7 @@ describe('<Header/>', () => {
   it("Click 'Next' navigates to next page", () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
-    const nextLink = screen.getByRole('navigation', {
+    const nextLink = screen.getByRole('link', {
       name: /next/i
     });
     userEvent.click(nextLink);
@@ -90,7 +90,7 @@ describe('<Header/>', () => {
   it("Click 'Up' navigates to sections page", () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
-    const upLink = screen.getByRole('navigation', {
+    const upLink = screen.getByRole('link', {
       name: /up/i
     });
     userEvent.click(upLink);
