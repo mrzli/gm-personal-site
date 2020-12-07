@@ -4,4 +4,3 @@ export interface HeaderData {
   readonly navigatePreviousData: HeaderNavigationItemData | undefined;
   readonly navigateNextData: HeaderNavigationItemData | undefined;
 }
-

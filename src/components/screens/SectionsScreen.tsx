@@ -1,11 +1,7 @@
 import React from 'react';
 
-interface SectionsScreenProps {
+interface SectionsScreenProps {}
 
-}
-
-export function SectionsScreen(
-  props: SectionsScreenProps
-): React.ReactElement {
-  return (<div>{'SectionsScreen'}</div>);
+export function SectionsScreen(props: SectionsScreenProps): React.ReactElement {
+  return <div>{'SectionsScreen'}</div>;
 }

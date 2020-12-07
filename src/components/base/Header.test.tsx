@@ -18,22 +18,20 @@ describe('<Header/>', () => {
     headerData: HeaderData
   ): RenderResult {
     const component = (
-      <>
-        <Switch>
-          <Route exact={true} path={'/'}>
-            <div>Sections Page</div>
-          </Route>
-          <Route exact={true} path={'/current'}>
-            <Header headerData={headerData} />
-          </Route>
-          <Route exact={true} path={'/previous'}>
-            <div>Previous Page</div>
-          </Route>
-          <Route exact={true} path={'/next'}>
-            <div>Next Page</div>
-          </Route>
-        </Switch>
-      </>
+      <Switch>
+        <Route exact={true} path={'/'}>
+          <div>{'Sections Page'}</div>
+        </Route>
+        <Route exact={true} path={'/current'}>
+          <Header headerData={headerData} />
+        </Route>
+        <Route exact={true} path={'/previous'}>
+          <div>{'Previous Page'}</div>
+        </Route>
+        <Route exact={true} path={'/next'}>
+          <div>{'Next Page'}</div>
+        </Route>
+      </Switch>
     );
     return testAppRender(component, createTestAppContextData(), '/current');
   }
@@ -72,30 +70,30 @@ describe('<Header/>', () => {
   it("Click 'Previous' navigates to previous page", () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
-    const previousLinkElement = screen.getByRole('navigation', {
+    const previousLink = screen.getByRole('navigation', {
       name: /previous/i
     });
-    userEvent.click(previousLinkElement);
+    userEvent.click(previousLink);
     expect(screen.queryByText(/Previous Page/)).toBeInTheDocument();
   });
 
   it("Click 'Next' navigates to next page", () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
-    const previousLinkElement = screen.getByRole('navigation', {
+    const nextLink = screen.getByRole('navigation', {
       name: /next/i
     });
-    userEvent.click(previousLinkElement);
+    userEvent.click(nextLink);
     expect(screen.queryByText(/Next Page/)).toBeInTheDocument();
   });
 
   it("Click 'Up' navigates to sections page", () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
-    const previousLinkElement = screen.getByRole('navigation', {
+    const upLink = screen.getByRole('navigation', {
       name: /up/i
     });
-    userEvent.click(previousLinkElement);
+    userEvent.click(upLink);
     expect(screen.queryByText(/Sections Page/)).toBeInTheDocument();
   });
 });

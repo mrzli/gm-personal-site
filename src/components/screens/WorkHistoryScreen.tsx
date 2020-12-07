@@ -1,11 +1,9 @@
 import React from 'react';
 
-interface WorkHistoryScreenProps {
-
-}
+interface WorkHistoryScreenProps {}
 
 export function WorkHistoryScreen(
   props: WorkHistoryScreenProps
 ): React.ReactElement {
-  return (<div>{'WorkHistoryScreen'}</div>);
+  return <div>{'WorkHistoryScreen'}</div>;
 }

@@ -1,11 +1,9 @@
 import React from 'react';
 
-interface ContactAndLinksScreenProps {
-
-}
+interface ContactAndLinksScreenProps {}
 
 export function ContactAndLinksScreen(
   props: ContactAndLinksScreenProps
 ): React.ReactElement {
-  return (<div>{'ContactAndLinksScreen'}</div>);
+  return <div>{'ContactAndLinksScreen'}</div>;
 }

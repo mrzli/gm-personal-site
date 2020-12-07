@@ -1,11 +1,6 @@
 import React from 'react';
-import { ScreenRoutes } from './components/base/ScreenRoutes';
+import { Layout } from './components/base/Layout';
 
 export function App(): React.ReactElement {
-  return (
-    <div>
-      <h1>{'Hello React'}</h1>
-      <ScreenRoutes />
-    </div>
-  );
+  return <Layout />;
 }

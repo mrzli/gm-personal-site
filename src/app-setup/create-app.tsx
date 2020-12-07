@@ -14,13 +14,7 @@ export function createApp(): React.ReactElement {
   const appContextData = createAppContextData(globals);
   const theme = createAppMuiTheme();
 
-  return wrapComponent(
-    component,
-    appContextData,
-    theme,
-    false,
-    ''
-  );
+  return wrapComponent(component, appContextData, theme, false, '');
 }
 
 export function setupApp(app: React.ReactElement): void {

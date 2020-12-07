@@ -41,9 +41,6 @@ export function testStandaloneComponentRender(
   options?: Omit<RenderOptions, 'queries'>
 ): RenderResult {
   const theme = createAppMuiTheme();
-  const wrappedComponent: React.ReactElement = wrapWithTheme(
-    component,
-    theme
-  );
+  const wrappedComponent: React.ReactElement = wrapWithTheme(component, theme);
   return render(wrappedComponent, options);
 }

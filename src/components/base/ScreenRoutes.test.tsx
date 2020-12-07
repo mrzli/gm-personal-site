@@ -8,7 +8,7 @@ import { APP_SECTIONS_TEST_DATA } from '../../test/data/app-sections-test-data';
 describe('<ScreenRoutes/>', () => {
   it('renders top sections screens', () => {
     testAppRender(<ScreenRoutes />, createTestAppContextData(), '/');
-    expect(screen.getByText(/SectionsScreen/)).toBeInTheDocument();
+    expect(screen.queryByText(/SectionsScreen/)).toBeInTheDocument();
   });
 
   describe('renders specific section screen', () => {
@@ -19,7 +19,9 @@ describe('<ScreenRoutes/>', () => {
           createTestAppContextData(),
           appSectionTestData.url
         );
-        expect(screen.getByText(appSectionTestData.title)).toBeInTheDocument();
+        expect(
+          screen.queryByText(appSectionTestData.title)
+        ).toBeInTheDocument();
       });
     });
   });

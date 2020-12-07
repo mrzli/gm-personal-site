@@ -9,9 +9,5 @@ export function wrapWithTheme(
   component: React.ReactElement,
   theme: Theme
 ): React.ReactElement {
-  return (
-    <MuiThemeProvider theme={theme}>
-      {component}
-    </MuiThemeProvider>
-  );
+  return <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>;
 }
