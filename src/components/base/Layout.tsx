@@ -3,17 +3,25 @@ import { Route, Switch, useLocation } from 'react-router-dom';
 import { Header } from './Header';
 import { Location } from 'history';
 import { HeaderData } from '../../types/header-data';
-import { Container, createStyles, StyleRules, Theme } from '@material-ui/core';
+import {
+  AppBar,
+  Container,
+  createStyles,
+  StyleRules,
+  Theme,
+  Toolbar
+} from '@material-ui/core';
 import { useStyles } from '../../utils/ui-hooks';
 import { ScreenRoutes } from './ScreenRoutes';
+import { LABEL_URL_PAIRS } from '../../data/label-url-pairs';
 
 interface LayoutProps {}
 
-type ClassKey = 'root';
+type ClassKey = 'container';
 
 function stylesCallback(theme: Theme): StyleRules<ClassKey, LayoutProps> {
   return createStyles<ClassKey, LayoutProps>({
-    root: {
+    container: {
       [theme.breakpoints.down('sm')]: {
         maxWidth: '100%'
       },
@@ -32,12 +40,19 @@ export function Layout(props: LayoutProps): React.ReactElement {
   const classes = useStyles(props, stylesCallback);
 
   return (
-    <Container className={classes.root}>
-      {getHeaderElement(location)}
-      <main>
-        <ScreenRoutes />
-      </main>
-    </Container>
+    <div>
+      <AppBar position={'fixed'}>
+        <Container className={classes.container}>
+          <Toolbar>{getHeaderElement(location)}</Toolbar>
+        </Container>
+      </AppBar>
+      <Toolbar />
+      <Container className={classes.container}>
+        <main>
+          <ScreenRoutes />
+        </main>
+      </Container>
+    </div>
   );
 }
 
@@ -51,42 +66,6 @@ function getHeaderElement(location: Location): React.ReactElement {
     </Switch>
   );
 }
-
-interface LabelUrlPair {
-  readonly label: string;
-  readonly url: string;
-}
-
-const LABEL_URL_PAIRS: readonly LabelUrlPair[] = [
-  {
-    label: 'Intro',
-    url: '/intro'
-  },
-  {
-    label: 'Work History',
-    url: '/work-history'
-  },
-  {
-    label: 'Personal Info',
-    url: '/personal-info'
-  },
-  {
-    label: 'Education',
-    url: '/education'
-  },
-  {
-    label: 'Skills Overview',
-    url: '/skills-overview'
-  },
-  {
-    label: 'Pros & Cons',
-    url: '/pros-and-cons'
-  },
-  {
-    label: 'Contact & Links',
-    url: '/contact-and-links'
-  }
-];
 
 function getHeaderData(location: Location): HeaderData {
   const labelUrlPairIndex = LABEL_URL_PAIRS.findIndex((pair) =>
