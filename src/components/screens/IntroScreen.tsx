@@ -2,6 +2,7 @@ import React from 'react';
 import { Title } from '../reusable/Title';
 import { SimpleText } from '../reusable/SimpleText';
 import profileImage from '../../assets/images/profile.jpg';
+import { Sections } from './parts/Sections';
 
 interface IntroScreenProps {}
 
@@ -63,6 +64,7 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
         I am a software developer with more than 12 years of professional
         software development experience. TODO
       </SimpleText>
+      <Sections />
     </div>
   );
 }

@@ -7,12 +7,6 @@ import { APP_SECTIONS_TEST_DATA } from '../../test/data/app-sections-test-data';
 import userEvent from '@testing-library/user-event';
 
 describe('<Layout/>', () => {
-  it('renders sections', () => {
-    testAppRender(<Layout />, createTestAppContextData(), '/');
-    expect(screen.queryByRole('link', { name: /up/i })).not.toBeInTheDocument();
-    expect(screen.queryByText('SectionsScreen')).toBeInTheDocument();
-  });
-
   describe('section link', () => {
     APP_SECTIONS_TEST_DATA.forEach((appSectionTestData, index) => {
       describe(appSectionTestData.name, () => {
@@ -76,18 +70,18 @@ describe('<Layout/>', () => {
           });
         }
 
-        it('up link navigates to sections', () => {
+        it('Home link navigates to home', () => {
           testAppRender(
             <Layout />,
             createTestAppContextData(),
             appSectionTestData.url
           );
 
-          const upLink = screen.getByRole('link', {
-            name: /up/i
+          const homeLink = screen.getByRole('link', {
+            name: /home/i
           });
-          userEvent.click(upLink);
-          expect(screen.queryByText('SectionsScreen')).toBeInTheDocument();
+          userEvent.click(homeLink);
+          expect(screen.queryByText('Name & Contact')).toBeInTheDocument();
         });
 
         it('has section content', () => {

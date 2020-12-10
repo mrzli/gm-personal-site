@@ -7,7 +7,7 @@ import { IntroScreen } from './IntroScreen';
 describe('<IntroScreen/>', () => {
   it('renders', () => {
     testAppRender(<IntroScreen />, createTestAppContextData(), '/');
-    const textElement = screen.getByText(/IntroScreen/);
+    const textElement = screen.getByText(/Name & Contact/);
     expect(textElement).toBeInTheDocument();
   });
 });

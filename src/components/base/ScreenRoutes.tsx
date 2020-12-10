@@ -1,6 +1,5 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { SectionsScreen } from '../screens/SectionsScreen';
 import { IntroScreen } from '../screens/IntroScreen';
 import { WorkHistoryScreen } from '../screens/WorkHistoryScreen';
 import { PersonalInfoScreen } from '../screens/PersonalInfoScreen';
@@ -15,9 +14,6 @@ export function ScreenRoutes(props: ScreenRoutesProps): React.ReactElement {
   return (
     <Switch>
       <Route exact={true} path={'/'}>
-        <SectionsScreen />
-      </Route>
-      <Route path={'/intro'}>
         <IntroScreen />
       </Route>
       <Route path={'/work-history'}>

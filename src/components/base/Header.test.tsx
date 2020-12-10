@@ -20,7 +20,7 @@ describe('<Header/>', () => {
     const component = (
       <Switch>
         <Route exact={true} path={'/'}>
-          <div>{'Sections Page'}</div>
+          <div>{'Home Page'}</div>
         </Route>
         <Route exact={true} path={'/current'}>
           <Header headerData={headerData} />
@@ -43,9 +43,9 @@ describe('<Header/>', () => {
   it('render with previous/next', () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
+    expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /previous/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /next/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /up/i })).toBeInTheDocument();
   });
 
   it('render without previous/next', () => {
@@ -54,13 +54,23 @@ describe('<Header/>', () => {
       navigateNextData: undefined
     });
 
+    expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
     expect(
       screen.queryByRole('link', { name: /previous/i })
     ).not.toBeInTheDocument();
     expect(
       screen.queryByRole('link', { name: /next/i })
     ).not.toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /up/i })).toBeInTheDocument();
+  });
+
+  it("Click 'Home' navigates to home page", () => {
+    renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
+
+    const upLink = screen.getByRole('link', {
+      name: /home/i
+    });
+    userEvent.click(upLink);
+    expect(screen.queryByText(/Home Page/)).toBeInTheDocument();
   });
 
   it("Click 'Previous' navigates to previous page", () => {
@@ -81,15 +91,5 @@ describe('<Header/>', () => {
     });
     userEvent.click(nextLink);
     expect(screen.queryByText(/Next Page/)).toBeInTheDocument();
-  });
-
-  it("Click 'Up' navigates to sections page", () => {
-    renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
-
-    const upLink = screen.getByRole('link', {
-      name: /up/i
-    });
-    userEvent.click(upLink);
-    expect(screen.queryByText(/Sections Page/)).toBeInTheDocument();
   });
 });

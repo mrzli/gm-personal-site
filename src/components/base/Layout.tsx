@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Header } from './Header';
 import { Location } from 'history';
 import { HeaderData } from '../../types/header-data';
@@ -42,12 +42,14 @@ export function Layout(props: LayoutProps): React.ReactElement {
   return (
     <div>
       <AppBar position={'fixed'}>
-        <Container className={classes.container}>
-          <Toolbar>{getHeaderElement(location)}</Toolbar>
+        <Container className={classes.container} style={{ padding: 0 }}>
+          <Toolbar>
+            <Header headerData={getHeaderData(location)} />
+          </Toolbar>
         </Container>
       </AppBar>
       <Toolbar />
-      <Container className={classes.container}>
+      <Container className={classes.container} style={{ paddingTop: 10 }}>
         <main>
           <ScreenRoutes />
         </main>
@@ -56,20 +58,9 @@ export function Layout(props: LayoutProps): React.ReactElement {
   );
 }
 
-function getHeaderElement(location: Location): React.ReactElement {
-  return (
-    <Switch>
-      <Route exact={true} path={'/'} />
-      <Route path={'*'}>
-        <Header headerData={getHeaderData(location)} />
-      </Route>
-    </Switch>
-  );
-}
-
 function getHeaderData(location: Location): HeaderData {
-  const labelUrlPairIndex = LABEL_URL_PAIRS.findIndex((pair) =>
-    location.pathname.startsWith(pair.url)
+  const labelUrlPairIndex = LABEL_URL_PAIRS.findIndex(
+    (pair) => location.pathname === pair.url
   );
 
   if (labelUrlPairIndex === -1) {

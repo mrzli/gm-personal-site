@@ -6,11 +6,6 @@ import { createTestAppContextData } from '../../test/data/app-test-data';
 import { APP_SECTIONS_TEST_DATA } from '../../test/data/app-sections-test-data';
 
 describe('<ScreenRoutes/>', () => {
-  it('renders top sections screens', () => {
-    testAppRender(<ScreenRoutes />, createTestAppContextData(), '/');
-    expect(screen.queryByText(/SectionsScreen/)).toBeInTheDocument();
-  });
-
   describe('renders specific section screen', () => {
     APP_SECTIONS_TEST_DATA.forEach((appSectionTestData) => {
       it(appSectionTestData.name, () => {
@@ -19,6 +14,7 @@ describe('<ScreenRoutes/>', () => {
           createTestAppContextData(),
           appSectionTestData.url
         );
+        screen.debug();
         expect(
           screen.queryByText(appSectionTestData.title)
         ).toBeInTheDocument();

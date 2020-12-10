@@ -4,8 +4,8 @@ export const APP_SECTIONS_TEST_DATA: readonly AppSectionTestData[] = [
   {
     name: 'Intro',
     label: 'Intro',
-    url: '/intro',
-    title: 'IntroScreen'
+    url: '/',
+    title: 'Name & Contact'
   },
   {
     name: 'WorkHistory',

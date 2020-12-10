@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
 import { HeaderData } from '../../types/header-data';
-import { Box, Grid, Hidden, SvgIcon } from '@material-ui/core';
-import { ArrowLeftBox, ArrowRightBox, ArrowUpBox } from 'mdi-material-ui';
+import { Hidden, SvgIcon } from '@material-ui/core';
+import { ArrowLeftBox, ArrowRightBox, Home } from 'mdi-material-ui';
 import { Link } from 'react-router-dom';
 
 interface HeaderProps {
@@ -12,65 +12,56 @@ export function Header(props: HeaderProps): React.ReactElement {
   const previousData = props.headerData.navigatePreviousData;
   const nextData = props.headerData.navigateNextData;
 
+  const navStyles: CSSProperties = {
+    fontSize: '1.8em',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  };
+
+  const prevNextStyles: CSSProperties = {
+    display: 'flex',
+    alignItems: 'center'
+  };
+
   const linkStyles: CSSProperties = {
     color: 'white',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    display: 'flex',
+    alignItems: 'center'
   };
 
   return (
     <header style={{ width: '100%' }}>
-      <nav>
-        <Box fontSize={'1.8em'} color={'text.primary'}>
-          <Grid container={true}>
-            <Grid item={true} xs={4}>
-              {previousData && (
-                <Link
-                  to={previousData.link}
-                  aria-label={'previous'}
-                  style={linkStyles}
-                >
-                  <Grid
-                    container={true}
-                    spacing={1}
-                    alignItems={'center'}
-                    justify={'center'}
-                  >
-                    <SvgIcon component={ArrowLeftBox} fontSize={'large'} />
-                    <Hidden smDown={true}>{previousData.text}</Hidden>
-                  </Grid>
-                </Link>
-              )}
-            </Grid>
-            <Grid item={true} xs={4}>
-              <Link to={'/'} aria-label={'up'} style={linkStyles}>
-                <Grid
-                  container={true}
-                  spacing={1}
-                  alignItems={'center'}
-                  justify={'center'}
-                >
-                  <SvgIcon component={ArrowUpBox} fontSize={'large'} />
-                  <Hidden smDown={true}>{'Sections'}</Hidden>
-                </Grid>
-              </Link>
-            </Grid>
-            <Grid item={true} xs={4}>
-              {nextData && (
-                <Link to={nextData.link} aria-label={'next'} style={linkStyles}>
-                  <Grid
-                    container={true}
-                    spacing={1}
-                    alignItems={'center'}
-                    justify={'center'}
-                  >
-                    <Hidden smDown={true}>{nextData.text}</Hidden>
-                    <SvgIcon component={ArrowRightBox} fontSize={'large'} />
-                  </Grid>
-                </Link>
-              )}
-            </Grid>
-          </Grid>
-        </Box>
+      <nav style={navStyles}>
+        <Link to={'/'} aria-label={'home'} style={linkStyles}>
+          <SvgIcon component={Home} fontSize={'large'} />
+        </Link>
+        <div style={prevNextStyles}>
+          {previousData && (
+            <Link
+              to={previousData.link}
+              aria-label={'previous'}
+              style={{ ...linkStyles, gridColumn: 1 }}
+            >
+              <SvgIcon component={ArrowLeftBox} fontSize={'large'} />
+              <Hidden xsDown={true}>
+                <span style={{ marginLeft: 10 }}>{previousData.text}</span>
+              </Hidden>
+            </Link>
+          )}
+          {previousData && nextData && (
+            <div style={{ margin: '0 10px' }}>|</div>
+          )}
+          {nextData && (
+            <Link to={nextData.link} aria-label={'next'} style={linkStyles}>
+              <Hidden xsDown={true}>
+                <span style={{ marginRight: 10 }}>{nextData.text}</span>
+              </Hidden>
+              <SvgIcon component={ArrowRightBox} fontSize={'large'} />
+            </Link>
+          )}
+        </div>
       </nav>
     </header>
   );
