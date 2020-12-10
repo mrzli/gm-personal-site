@@ -9,9 +9,7 @@ import userEvent from '@testing-library/user-event';
 describe('<Layout/>', () => {
   it('renders sections', () => {
     testAppRender(<Layout />, createTestAppContextData(), '/');
-    expect(
-      screen.queryByRole('link', { name: /up/i })
-    ).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: /up/i })).not.toBeInTheDocument();
     expect(screen.queryByText('SectionsScreen')).toBeInTheDocument();
   });
 

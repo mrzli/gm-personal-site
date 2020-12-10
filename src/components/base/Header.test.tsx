@@ -43,12 +43,8 @@ describe('<Header/>', () => {
   it('render with previous/next', () => {
     renderHeaderWithPreviousNextLinks(FULL_HEADER_DATA);
 
-    expect(
-      screen.getByRole('link', { name: /previous/i })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('link', { name: /next/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /previous/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /next/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /up/i })).toBeInTheDocument();
   });
 

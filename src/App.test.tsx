@@ -1,6 +1,5 @@
 import React from 'react';
 
 describe('<App/>', () => {
-  it('renders hello react', () => {
-  });
+  it('renders hello react', () => {});
 });
