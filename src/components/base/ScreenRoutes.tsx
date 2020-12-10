@@ -6,7 +6,6 @@ import { PersonalInfoScreen } from '../screens/PersonalInfoScreen';
 import { EducationScreen } from '../screens/EducationScreen';
 import { SkillsOverviewScreen } from '../screens/SkillsOverviewScreen';
 import { ProsAndConsScreen } from '../screens/ProsAndConsScreen';
-import { ContactAndLinksScreen } from '../screens/ContactAndLinksScreen';
 
 interface ScreenRoutesProps {}
 
@@ -30,9 +29,6 @@ export function ScreenRoutes(props: ScreenRoutesProps): React.ReactElement {
       </Route>
       <Route path={'/pros-and-cons'}>
         <ProsAndConsScreen />
-      </Route>
-      <Route path={'/contact-and-links'}>
-        <ContactAndLinksScreen />
       </Route>
       <Route path={'*'}>
         <Redirect to={'/'} />

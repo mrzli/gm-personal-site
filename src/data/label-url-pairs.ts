@@ -10,10 +10,6 @@ export const LABEL_URL_PAIRS: readonly LabelUrlPair[] = [
     url: '/work-history'
   },
   {
-    label: 'Personal Info',
-    url: '/personal-info'
-  },
-  {
     label: 'Education',
     url: '/education'
   },
@@ -26,7 +22,7 @@ export const LABEL_URL_PAIRS: readonly LabelUrlPair[] = [
     url: '/pros-and-cons'
   },
   {
-    label: 'Contact & Links',
-    url: '/contact-and-links'
+    label: 'Personal Info',
+    url: '/personal-info'
   }
 ];

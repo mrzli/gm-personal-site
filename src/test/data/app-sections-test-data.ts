@@ -14,12 +14,6 @@ export const APP_SECTIONS_TEST_DATA: readonly AppSectionTestData[] = [
     title: 'WorkHistoryScreen'
   },
   {
-    name: 'PersonalInfo',
-    label: 'Personal Info',
-    url: '/personal-info',
-    title: 'PersonalInfoScreen'
-  },
-  {
     name: 'Education',
     label: 'Education',
     url: '/education',
@@ -38,9 +32,9 @@ export const APP_SECTIONS_TEST_DATA: readonly AppSectionTestData[] = [
     title: 'ProsAndConsScreen'
   },
   {
-    name: 'ContactAndLinks',
-    label: 'Contact & Links',
-    url: '/contact-and-links',
-    title: 'ContactAndLinksScreen'
+    name: 'PersonalInfo',
+    label: 'Personal Info',
+    url: '/personal-info',
+    title: 'PersonalInfoScreen'
   }
 ];

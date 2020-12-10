@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { Title } from '../reusable/Title';
 import { SimpleText } from '../reusable/SimpleText';
 import profileImage from '../../assets/images/profile.jpg';
-import { Sections } from './parts/Sections';
+import { LABEL_URL_PAIRS } from '../../data/label-url-pairs';
+import { Link } from 'react-router-dom';
+import { Linkedin, Github, StackOverflow } from 'mdi-material-ui';
+import { SvgIcon } from '@material-ui/core';
 
 interface IntroScreenProps {}
 
 export function IntroScreen(props: IntroScreenProps): React.ReactElement {
+  const linkStyles: CSSProperties = {
+    color: '#424242'
+  };
+
   return (
     <div>
       <Title>{'Name & Contact'}</Title>
@@ -18,20 +25,20 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
           columnGap: 20
         }}
       >
-        <div style={{ gridColumnStart: 1 }}>{getImageElement()}</div>
+        <div style={{ gridColumn: 1 }}>{getImageElement()}</div>
         <div
           style={{
             display: 'grid',
             alignContent: 'center',
-            gridTemplateRows: 'auto auto auto',
+            gridTemplateRows: 'repeat(4, auto)',
             gridTemplateColumns: '1fr',
             rowGap: 10
           }}
         >
-          <div style={{ gridRowStart: 1 }}>{'Goran Mržljak'}</div>
+          <div style={{ gridRow: 1, fontSize: '1.2em' }}>{'Goran Mržljak'}</div>
           <div
             style={{
-              gridRowStart: 2
+              gridRow: 2
             }}
           >
             <a
@@ -45,7 +52,7 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
           </div>
           <div
             style={{
-              gridRowStart: 3
+              gridRow: 3
             }}
           >
             <a
@@ -57,6 +64,31 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
               {'goran.mrzljak@gmail.com'}
             </a>
           </div>
+          <div
+            style={{
+              gridRow: 4,
+              display: 'grid',
+              columnGap: 10,
+              gridTemplateColumns: 'repeat(3, auto)',
+              justifyContent: 'start'
+            }}
+          >
+            <a
+              href={'https://www.linkedin.com/in/goran-mrzljak'}
+              style={linkStyles}
+            >
+              <SvgIcon component={Linkedin} fontSize={'large'} />
+            </a>
+            <a href={'https://github.com/mrzli'} style={linkStyles}>
+              <SvgIcon component={Github} fontSize={'large'} />
+            </a>
+            <a
+              href={'https://stackoverflow.com/users/520229/mrzli'}
+              style={linkStyles}
+            >
+              <SvgIcon component={StackOverflow} fontSize={'large'} />
+            </a>
+          </div>
         </div>
       </div>
       <Title>{'Professional Profile'}</Title>
@@ -64,7 +96,14 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
         I am a software developer with more than 12 years of professional
         software development experience. TODO
       </SimpleText>
-      <Sections />
+      <Title>{'Other Sections'}</Title>
+      <ul>
+        {LABEL_URL_PAIRS.slice(1).map((pair, index) => (
+          <li key={index}>
+            <Link to={pair.url}>{pair.label}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
