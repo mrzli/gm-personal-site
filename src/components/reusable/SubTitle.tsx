@@ -1,14 +1,13 @@
 import React, { CSSProperties } from 'react';
 
-export interface SubTitleBoldProps {
-  readonly children: string;
+export interface SubTitleProps {
+  readonly children: React.ReactNode;
 }
 
-export function SubTitleBold(props: SubTitleBoldProps): React.ReactElement {
+export function SubTitle(props: SubTitleProps): React.ReactElement {
   const styles: CSSProperties = {
     color: '#E91D63',
     fontFamily: 'Source Code Pro',
-    fontWeight: 'bold',
     fontSize: '15px'
   };
 

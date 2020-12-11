@@ -25,8 +25,6 @@ export function Header(props: HeaderProps): React.ReactElement {
   };
 
   const linkStyles: CSSProperties = {
-    color: 'white',
-    textDecoration: 'none',
     display: 'flex',
     alignItems: 'center'
   };

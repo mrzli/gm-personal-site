@@ -16,7 +16,7 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
 
   return (
     <div>
-      <Title>{'Name & Contact'}</Title>
+      <Title>Name &amp; Contact</Title>
       <div
         style={{
           display: 'grid',
@@ -35,7 +35,7 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
             rowGap: 10
           }}
         >
-          <div style={{ gridRow: 1, fontSize: '1.2em' }}>{'Goran Mržljak'}</div>
+          <div style={{ gridRow: 1, fontSize: '1.2em' }}>Goran Mržljak</div>
           <div
             style={{
               gridRow: 2
@@ -47,7 +47,7 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
                 color: '#E91D63'
               }}
             >
-              {'+385 91 224 3145'}
+              +385 91 224 3145
             </a>
           </div>
           <div
@@ -61,7 +61,7 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
                 color: '#E91D63'
               }}
             >
-              {'goran.mrzljak@gmail.com'}
+              goran.mrzljak@gmail.com
             </a>
           </div>
           <div
@@ -114,7 +114,10 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
           Throughout my career I have also worked quite a bit on the backend
           with Spring (using both Java and Kotlin). For more details, and for
           other experience that I have, check&nbsp;
-          <a href={'/work-history'}>Work History</a>.
+          <a href={'/work-history'} className={'gm-link'}>
+            Work History
+          </a>
+          .
         </p>
       </SimpleText>
       <Title>Current Professional Interests (techs, type of work)</Title>
@@ -138,12 +141,23 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
           overlapping knowledge with frontend use of Node/NPM, Typescript,
           linting, testing, and with other backend stacks).
         </p>
+        <p>
+          I am a freelancer and I use an LLC (more precisely a Croatian
+          equivalent called "d.o.o.") as a platform for doing business. I
+          prefer&nbsp;<b>B2B</b> contracts and will usually not accept work if
+          the condition is a standard employment contract. This refers to the
+          form of the relationship, I have no problem doing a full 40h/week
+          workload for a single client - in recent projects this was usually the
+          case.
+        </p>
       </SimpleText>
       <Title>Other Sections</Title>
       <ul>
         {LABEL_URL_PAIRS.slice(1).map((pair, index) => (
           <li key={index}>
-            <Link to={pair.url}>{pair.label}</Link>
+            <Link to={pair.url} className={'gm-link'}>
+              {pair.label}
+            </Link>
           </li>
         ))}
       </ul>
