@@ -17,7 +17,7 @@ export const APP_SECTIONS_TEST_DATA: readonly AppSectionTestData[] = [
     name: 'Education',
     label: 'Education',
     url: '/education',
-    title: 'EducationScreen'
+    title: 'Formal Education'
   },
   {
     name: 'SkillsOverview',

@@ -7,7 +7,7 @@ import { EducationScreen } from './EducationScreen';
 describe('<EducationScreen/>', () => {
   it('renders', () => {
     testAppRender(<EducationScreen />, createTestAppContextData(), '/');
-    const textElement = screen.getByText(/EducationScreen/);
+    const textElement = screen.getByText(/Formal Education/);
     expect(textElement).toBeInTheDocument();
   });
 });
