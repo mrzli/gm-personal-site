@@ -18,9 +18,6 @@ export function ScreenRoutes(props: ScreenRoutesProps): React.ReactElement {
       <Route path={'/work-history'}>
         <WorkHistoryScreen />
       </Route>
-      <Route path={'/personal-info'}>
-        <PersonalInfoScreen />
-      </Route>
       <Route path={'/education'}>
         <EducationScreen />
       </Route>
@@ -29,6 +26,9 @@ export function ScreenRoutes(props: ScreenRoutesProps): React.ReactElement {
       </Route>
       <Route path={'/pros-and-cons'}>
         <ProsAndConsScreen />
+      </Route>
+      <Route path={'/personal-info'}>
+        <PersonalInfoScreen />
       </Route>
       <Route path={'*'}>
         <Redirect to={'/'} />

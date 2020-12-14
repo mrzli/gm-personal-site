@@ -7,7 +7,7 @@ import { PersonalInfoScreen } from './PersonalInfoScreen';
 describe('<PersonalInfoScreen/>', () => {
   it('renders', () => {
     testAppRender(<PersonalInfoScreen />, createTestAppContextData(), '/');
-    const textElement = screen.getByText(/PersonalInfoScreen/);
+    const textElement = screen.getByText(/Personal Info/);
     expect(textElement).toBeInTheDocument();
   });
 });
