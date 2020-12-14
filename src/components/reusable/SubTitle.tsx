@@ -7,8 +7,7 @@ export interface SubTitleProps {
 export function SubTitle(props: SubTitleProps): React.ReactElement {
   const styles: CSSProperties = {
     color: '#E91D63',
-    fontFamily: 'Source Code Pro',
-    fontSize: '15px'
+    fontSize: '16px'
   };
 
   return <h2 style={styles}>{props.children}</h2>;

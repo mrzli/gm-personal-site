@@ -8,7 +8,6 @@ export function Title(props: TitleProps): React.ReactElement {
   const styles: CSSProperties = {
     textTransform: 'uppercase',
     color: '#424242',
-    fontFamily: 'Oswald',
     fontSize: '18px',
     marginTop: '1.2em'
   };

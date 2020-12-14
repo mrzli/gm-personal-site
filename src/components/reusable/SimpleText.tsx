@@ -6,9 +6,8 @@ export interface SimpleTextProps {
 
 export function SimpleText(props: SimpleTextProps): React.ReactElement {
   const styles: CSSProperties = {
-    color: '#666666',
-    fontFamily: 'Source Code Pro',
-    fontSize: '14px'
+    color: '#505050',
+    fontSize: '15px'
   };
 
   return <span style={styles}>{props.children}</span>;

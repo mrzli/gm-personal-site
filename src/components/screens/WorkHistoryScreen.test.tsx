@@ -7,7 +7,7 @@ import { WorkHistoryScreen } from './WorkHistoryScreen';
 describe('<WorkHistoryScreen/>', () => {
   it('renders', () => {
     testAppRender(<WorkHistoryScreen />, createTestAppContextData(), '/');
-    const textElement = screen.getByText(/WorkHistoryScreen/);
+    const textElement = screen.getByText(/Work History/);
     expect(textElement).toBeInTheDocument();
   });
 });

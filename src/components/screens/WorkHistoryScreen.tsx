@@ -2,7 +2,6 @@ import React from 'react';
 import { Title } from '../reusable/Title';
 import { SubTitle } from '../reusable/SubTitle';
 import { SimpleText } from '../reusable/SimpleText';
-import { Sim } from 'mdi-material-ui';
 
 interface WorkHistoryScreenProps {}
 
