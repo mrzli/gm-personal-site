@@ -10,7 +10,7 @@ export function EducationScreen(props: EducationPageProps): React.ReactElement {
     <div>
       <Title>Formal Education</Title>
       <SubTitle>
-        <a href={'https://www.fer.unizg.hr/en'}>
+        <a href={'https://www.fer.unizg.hr/en'} className={'gm-link'}>
           Faculty of Electrical Engineering and Computing (FER), University of
           Zagreb
         </a>

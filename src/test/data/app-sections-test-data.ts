@@ -11,7 +11,7 @@ export const APP_SECTIONS_TEST_DATA: readonly AppSectionTestData[] = [
     name: 'WorkHistory',
     label: 'Work History',
     url: '/work-history',
-    title: 'WorkHistoryScreen'
+    title: 'Work History'
   },
   {
     name: 'Education',
