@@ -47,9 +47,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:nowwatch": "react-scripts test --watchAll=false",
     "lint": "eslint --ext .ts,.tsx,.js .",
     "prettier": "prettier --write .",
-    "prettier-check": "prettier --check .",
+    "prettier:check": "prettier --check .",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "eject": "react-scripts eject"
@@ -81,7 +82,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn prettier-check && yarn lint && yarn test"
+      "pre-push": "yarn prettier:check && yarn lint && yarn test:nowatch"
     }
   }
 }
