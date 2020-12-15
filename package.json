@@ -47,7 +47,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:nowwatch": "react-scripts test --watchAll=false",
+    "test:nowatch": "react-scripts test --watchAll=false",
     "lint": "eslint --ext .ts,.tsx,.js .",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
