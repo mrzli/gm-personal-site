@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/gm-personal-site/static/css/main.1fd7fffa.chunk.css",
+    "main.js": "/gm-personal-site/static/js/main.6364e76f.chunk.js",
+    "main.js.map": "/gm-personal-site/static/js/main.6364e76f.chunk.js.map",
+    "runtime-main.js": "/gm-personal-site/static/js/runtime-main.021f831c.js",
+    "runtime-main.js.map": "/gm-personal-site/static/js/runtime-main.021f831c.js.map",
+    "static/css/2.58bbf979.chunk.css": "/gm-personal-site/static/css/2.58bbf979.chunk.css",
+    "static/js/2.322fb307.chunk.js": "/gm-personal-site/static/js/2.322fb307.chunk.js",
+    "static/js/2.322fb307.chunk.js.map": "/gm-personal-site/static/js/2.322fb307.chunk.js.map",
+    "static/js/3.d03dea98.chunk.js": "/gm-personal-site/static/js/3.d03dea98.chunk.js",
+    "static/js/3.d03dea98.chunk.js.map": "/gm-personal-site/static/js/3.d03dea98.chunk.js.map",
+    "index.html": "/gm-personal-site/index.html",
+    "static/css/2.58bbf979.chunk.css.map": "/gm-personal-site/static/css/2.58bbf979.chunk.css.map",
+    "static/css/main.1fd7fffa.chunk.css.map": "/gm-personal-site/static/css/main.1fd7fffa.chunk.css.map",
+    "static/js/2.322fb307.chunk.js.LICENSE.txt": "/gm-personal-site/static/js/2.322fb307.chunk.js.LICENSE.txt",
+    "static/media/profile.ef48878c.jpg": "/gm-personal-site/static/media/profile.ef48878c.jpg",
+    "static/media/index.scss": "/gm-personal-site/static/media/roboto-vietnamese-700-normal.cfedd72c.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.021f831c.js",
+    "static/css/2.58bbf979.chunk.css",
+    "static/js/2.322fb307.chunk.js",
+    "static/css/main.1fd7fffa.chunk.css",
+    "static/js/main.6364e76f.chunk.js"
+  ]
+}
