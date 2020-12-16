@@ -65,6 +65,8 @@ export function SkillsOverviewScreen(
         </ul>
         <p>Libraries, Frameworks, Platforms, Tools:</p>
         <ul>
+          <li>Vue</li>
+          <li>Vuetify (UI component library for Vue)</li>
           <li>AngularJS</li>
           <li>JUnit</li>
           <li>ASP.NET Web Forms</li>
@@ -101,8 +103,6 @@ export function SkillsOverviewScreen(
         </ul>
         <p>Libraries, Frameworks, Platforms, Tools:</p>
         <ul>
-          <li>Vue</li>
-          <li>Vuetify (UI component library for Vue)</li>
           <li>Cypress</li>
           <li>Express</li>
           <li>Android SDK</li>

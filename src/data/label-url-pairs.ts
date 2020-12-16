@@ -22,6 +22,10 @@ export const LABEL_URL_PAIRS: readonly LabelUrlPair[] = [
   //   url: '/pros-and-cons'
   // },
   {
+    label: 'Personal Projects',
+    url: '/personal-projects'
+  },
+  {
     label: 'Personal Info',
     url: '/personal-info'
   }
