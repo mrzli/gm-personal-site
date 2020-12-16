@@ -23,7 +23,7 @@ export const APP_SECTIONS_TEST_DATA: readonly AppSectionTestData[] = [
     name: 'SkillsOverview',
     label: 'Skills Overview',
     url: '/skills-overview',
-    title: 'SkillsOverviewScreen'
+    title: 'Skills Overview'
   },
   // {
   //   name: 'ProsAndCons',

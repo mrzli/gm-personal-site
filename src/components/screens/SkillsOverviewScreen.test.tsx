@@ -7,7 +7,7 @@ import { SkillsOverviewScreen } from './SkillsOverviewScreen';
 describe('<SkillsOverviewScreen/>', () => {
   it('renders', () => {
     testAppRender(<SkillsOverviewScreen />, createTestAppContextData(), '/');
-    const textElement = screen.getByText(/SkillsOverviewScreen/);
+    const textElement = screen.getByText(/Skills Overview/);
     expect(textElement).toBeInTheDocument();
   });
 });
