@@ -20,12 +20,34 @@ export function WorkHistoryScreen(
       <SimpleText>
         <p>JANUARY 2016 - PRESENT</p>
         <p>
-          A sizeable (100 kloc frontend) web application in the insurance domain
-          that is built for a UK client.
+          A medium sized web application (100 kloc frontend) in the insurance
+          domain that is built for a UK client. The app facilitates connection
+          of different parties involved in the insurance process, search of
+          insurance schemes etc:
         </p>
         <ul>
-          <li>Techs used: React</li>
-          <li>My role: TODO</li>
+          <li>
+            Techs used: React, TypeScript, Jest, Webpack, Storybook, React
+            Testing Library, Material-UI, Redux/redux-observable/RxJS, Cypress
+          </li>
+          <li>
+            My role: I got onto the project after it was in development for
+            about a year and half. For most of the time on the project, I was
+            the sole frontend developer. My job was refactoring large chunks of
+            the frontend code base, from the API interface to the UI. This
+            included: refactoring (cleaning up, splitting, fixing serious typing
+            issues) of components and entire app sections, complete refactoring
+            of the state management system and async (API calling)
+            infrastructure (using Redux and redux-observable), cleaning-up top
+            level app structure, clean-up and changes to the development/build
+            toolchain (scripts, Webpack), introduction of linting, some tests
+            (all 'utility' code was well covered by tests, but I did only basic
+            testing for component and a handful of Cypress tests - login process
+            etc). I included Storybook and used it to create a component library
+            (sort of like a wrapper around Material-UI) that matched existing
+            app styles to reduce the existing code duplication. And of course, I
+            did new feature development and fixes when necessary.
+          </li>
         </ul>
         <p>
           A large application for accounting and transactions built for a medium
@@ -33,7 +55,7 @@ export function WorkHistoryScreen(
           complicated logic, forms and data display/editing:
         </p>
         <ul>
-          <li>Techs used: Angular, TypeScript, Jest, RxJs, ag-Grid</li>
+          <li>Techs used: Angular, TypeScript, Jest, RxJS, ag-Grid</li>
           <li>
             My role: I worked exclusively on the frontend. A colleague and I got
             on board of this project from when the sizeable efforts on it
