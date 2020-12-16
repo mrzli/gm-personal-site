@@ -14,7 +14,7 @@ describe('<ScreenRoutes/>', () => {
           createTestAppContextData(),
           appSectionTestData.url
         );
-        screen.debug();
+        //screen.debug();
         expect(
           screen.queryByText(appSectionTestData.title)
         ).toBeInTheDocument();
