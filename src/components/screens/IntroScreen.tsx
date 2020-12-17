@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 import { Linkedin, Github, StackOverflow } from 'mdi-material-ui';
 import { SvgIcon } from '@material-ui/core';
 
-interface IntroScreenProps {}
-
-export function IntroScreen(props: IntroScreenProps): React.ReactElement {
+export function IntroScreen(): React.ReactElement {
   const linkStyles: CSSProperties = {
     color: '#424242'
   };
@@ -95,7 +93,7 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
       <SimpleText>
         <p>
           I am a software developer with more than 12 years of professional
-          software development experience. I have a lot of experience with a
+          software development experience. I have extensive experience with a
           wide range of technologies and stacks, but I am now primarily building
           web applications.
         </p>
@@ -106,9 +104,9 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
         </p>
         <p>
           Recently I have been doing mostly frontend, with the most recent
-          project (as of December 2020) being done with React - which is my
-          favorite. I also have significant experience with the rest of the Big
-          Three (Angular and Vue), but I prefer React.
+          project (as of December 2020) being done with React. I also have
+          significant experience with the rest of the Big Three (Angular and
+          Vue), but I prefer React.
         </p>
         <p>
           Throughout my career I have also worked quite a bit on the backend
@@ -133,13 +131,13 @@ export function IntroScreen(props: IntroScreenProps): React.ReactElement {
           built using other frontend frameworks.
         </p>
         <p>
-          Regarding backend, I am interested in either <b>Spring</b> (with a
-          preference for <b>Kotlin</b>, but not a big deal if it is <b>Java</b>
-          ), or <b>Node.js</b>. I don't have a lot of formal Node.js experience
+          Regarding backend, I am interested in either <b>Node.js</b>, or{' '}
+          <b>Spring</b> (with a preference for <b>Kotlin</b>, but not a big deal
+          if it is <b>Java</b>). I don't have a lot of formal Node.js experience
           on the backend, but I like it from what I have seen, and I know for
           sure I can immediately get into a Node.js project (a lot of
           overlapping knowledge with frontend use of Node/NPM, Typescript,
-          linting, testing, and with other backend stacks).
+          linting, testing, and also with other backend stacks).
         </p>
         <p>
           I am a freelancer and I use an LLC (more precisely a Croatian

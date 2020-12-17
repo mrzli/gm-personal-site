@@ -3,11 +3,7 @@ import { Title } from '../reusable/Title';
 import { SubTitle } from '../reusable/SubTitle';
 import { SimpleText } from '../reusable/SimpleText';
 
-interface SkillsOverviewScreenProps {}
-
-export function SkillsOverviewScreen(
-  props: SkillsOverviewScreenProps
-): React.ReactElement {
+export function SkillsOverviewScreen(): React.ReactElement {
   return (
     <div>
       <Title>Skills Overview (Techs I Worked With)</Title>
@@ -106,10 +102,7 @@ export function SkillsOverviewScreen(
           <li>Cypress</li>
           <li>Express</li>
           <li>Android SDK</li>
-          <li>
-            some Android and other game development (non-professionally, as a
-            hobby)
-          </li>
+          <li>libGDX</li>
           <li>Docker</li>
           <li>Docker Swarm</li>
         </ul>

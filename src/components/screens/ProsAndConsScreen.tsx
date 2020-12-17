@@ -1,9 +1,5 @@
 import React from 'react';
 
-interface ProsAndConsScreenProps {}
-
-export function ProsAndConsScreen(
-  props: ProsAndConsScreenProps
-): React.ReactElement {
+export function ProsAndConsScreen(): React.ReactElement {
   return <div>{'ProsAndConsScreen'}</div>;
 }

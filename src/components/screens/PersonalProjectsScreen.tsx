@@ -3,18 +3,11 @@ import { Title } from '../reusable/Title';
 import { SimpleText } from '../reusable/SimpleText';
 import { SubTitle } from '../reusable/SubTitle';
 
-interface PersonalProjectsScreenProps {}
-
-export function PersonalProjectsScreen(
-  props: PersonalProjectsScreenProps
-): React.ReactElement {
+export function PersonalProjectsScreen(): React.ReactElement {
   return (
     <div>
       <Title>Personal Projects</Title>
-      <SimpleText>
-        These are just a few simple games I created a long time ago as hobby
-        projects.
-      </SimpleText>
+      <SimpleText>Projects that I did in my free time.</SimpleText>
       <SubTitle>Symbol Jump</SubTitle>
       <SimpleText>
         <p>
@@ -41,28 +34,35 @@ export function PersonalProjectsScreen(
       </SimpleText>
       <SubTitle>Hell Hopper</SubTitle>
       <SimpleText>
-        A more primitive predecessor of 'Symbol Jump' (
-        <a href={'https://github.com/mrzli/hellhopper'} className={'gm-link'}>
-          Source
-        </a>
-        ).
+        <p>
+          A more primitive predecessor of 'Symbol Jump' (
+          <a href={'https://github.com/mrzli/hellhopper'} className={'gm-link'}>
+            Source
+          </a>
+          ).
+        </p>
+        <ul>
+          <li>Techs used: Java, libGDX, Android SDK.</li>
+          <li>My role: I wrote all the code and created all the graphics.</li>
+        </ul>
       </SimpleText>
-      <ul>
-        <li>Techs used: Java, libGDX, Android SDK.</li>
-        <li>My role: I wrote all the code and created all the graphics.</li>
-      </ul>
       <SubTitle>Suchy Blocks</SubTitle>
       <SimpleText>
-        Tetris clone, available for Android and desktop (
-        <a href={'https://github.com/mrzli/suchyblocks'} className={'gm-link'}>
-          Source
-        </a>
-        ).
+        <p>
+          Tetris clone, available for Android and desktop (
+          <a
+            href={'https://github.com/mrzli/suchyblocks'}
+            className={'gm-link'}
+          >
+            Source
+          </a>
+          ).
+        </p>
+        <ul>
+          <li>Techs used: Java, libGDX, Android SDK.</li>
+          <li>My role: I wrote all the code and created all the graphics.</li>
+        </ul>
       </SimpleText>
-      <ul>
-        <li>Techs used: Java, libGDX, Android SDK.</li>
-        <li>My role: I wrote all the code and created all the graphics.</li>
-      </ul>
     </div>
   );
 }

@@ -3,9 +3,7 @@ import { Title } from '../reusable/Title';
 import { SubTitle } from '../reusable/SubTitle';
 import { SimpleText } from '../reusable/SimpleText';
 
-interface EducationPageProps {}
-
-export function EducationScreen(props: EducationPageProps): React.ReactElement {
+export function EducationScreen(): React.ReactElement {
   return (
     <div>
       <Title>Formal Education</Title>
@@ -86,8 +84,8 @@ export function EducationScreen(props: EducationPageProps): React.ReactElement {
         <p>UDEMY</p>
         <p>
           I took courses related to the following techs/subjects: Angular, Vue,
-          React, NodeJS, Vim, Docker etc. So, this is stuff I directly use (or
-          have used) in my professional work.
+          React, NodeJS, Vim, Docker etc. So, these are things I directly use
+          (or have used) in my professional work.
         </p>
       </SimpleText>
     </div>
