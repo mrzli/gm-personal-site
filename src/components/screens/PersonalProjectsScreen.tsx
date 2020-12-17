@@ -8,6 +8,37 @@ export function PersonalProjectsScreen(): React.ReactElement {
     <div>
       <Title>Personal Projects</Title>
       <SimpleText>Projects that I did in my free time.</SimpleText>
+      <SubTitle>CV Website (this site)</SubTitle>
+      <SimpleText>
+        <p>
+          Simple website for displaying my professional info (
+          <a href={'https://mrzli.github.io/'} className={'gm-link'}>
+            Site
+          </a>
+          ,&nbsp;
+          <a
+            href={'https://github.com/mrzli/mrzli.github.io'}
+            className={'gm-link'}
+          >
+            Source
+          </a>
+          ):
+        </p>
+        <ul>
+          <li>
+            Techs used: React, Typescript, Prettier, ESLint, Jest, React Testing
+            Library
+          </li>
+          <li>
+            My role: I did all the development. The site is static and very
+            simple. All of the content of the pages is simply hardcoded into the
+            components. I used Heroku for development, the deployment is
+            automatic (on each push to <code>master</code> branch). "Production"
+            deployment to GitHub Pages is manual, but it is done by executing a
+            single command.
+          </li>
+        </ul>
+      </SimpleText>
       <SubTitle>Symbol Jump</SubTitle>
       <SimpleText>
         <p>
