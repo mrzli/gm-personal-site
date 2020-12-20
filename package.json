@@ -74,10 +74,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrzli/gm-personal-site"
+    "url": "https://github.com/mrzli/mrzli.github.io"
   },
   "bugs": {
-    "url": "https://github.com/mrzli/gm-personal-site/issues"
+    "url": "https://github.com/mrzli/mrzli.github.io/issues"
   },
   "engines": {
     "node": "15.2.1",
