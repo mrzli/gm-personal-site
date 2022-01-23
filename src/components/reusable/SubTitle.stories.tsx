@@ -1,15 +1,17 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { SubTitle, SubTitleProps } from './SubTitle';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { SubTitle } from './SubTitle';
 
 export default {
   title: 'Components/Reusable/Sub-Title',
   component: SubTitle,
-} as Meta;
+} as ComponentMeta<typeof SubTitle>;
 
-const Template: Story<SubTitleProps> = (args) => <SubTitle {...args} />;
+const Template: ComponentStory<typeof SubTitle> = (args) => (
+  <SubTitle {...args} />
+);
 
-export const Simple = Template.bind({});
+export const Simple: ComponentStory<typeof SubTitle> = Template.bind({});
 Simple.args = {
   children: 'SubTitle',
 };

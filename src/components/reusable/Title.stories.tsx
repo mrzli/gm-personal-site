@@ -1,15 +1,15 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Title, TitleProps } from './Title';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Title } from './Title';
 
 export default {
   title: 'Components/Reusable/Title',
   component: Title,
-} as Meta;
+} as ComponentMeta<typeof Title>;
 
-const Template: Story<TitleProps> = (args) => <Title {...args} />;
+const Template: ComponentStory<typeof Title> = (args) => <Title {...args} />;
 
-export const Simple = Template.bind({});
+export const Simple: ComponentStory<typeof Title> = Template.bind({});
 Simple.args = {
   children: 'Title',
 };
