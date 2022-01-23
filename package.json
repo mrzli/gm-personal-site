@@ -9,8 +9,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:nowatch": "react-scripts test --watchAll=false",
+    "test": "react-scripts test --passWithNoTests",
+    "test:nowatch": "react-scripts test --watchAll=false --passWithNoTests",
     "lint": "eslint --ext .ts,.tsx,.js .",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
