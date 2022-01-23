@@ -3,53 +3,24 @@ import { useLocation } from 'react-router-dom';
 import { Header } from './Header';
 import { Location } from 'history';
 import { HeaderData } from '../../types/header-data';
-import {
-  AppBar,
-  Container,
-  createStyles,
-  StyleRules,
-  Theme,
-  Toolbar,
-} from '@material-ui/core';
-import { useStyles } from '../../utils/ui-hooks';
+import { AppBar, Container, Toolbar } from '@mui/material';
 import { ScreenRoutes } from './ScreenRoutes';
 import { LABEL_URL_PAIRS } from '../../data/label-url-pairs';
 
-interface LayoutProps {}
-
-type ClassKey = 'container';
-
-function stylesCallback(theme: Theme): StyleRules<ClassKey, LayoutProps> {
-  return createStyles<ClassKey, LayoutProps>({
-    container: {
-      [theme.breakpoints.down('sm')]: {
-        maxWidth: '100%',
-      },
-      [theme.breakpoints.only('md')]: {
-        maxWidth: 900,
-      },
-      [theme.breakpoints.up('lg')]: {
-        maxWidth: 1200,
-      },
-    },
-  });
-}
-
-export function Layout(props: LayoutProps): React.ReactElement {
+export function Layout(): React.ReactElement {
   const location: Location = useLocation();
-  const classes = useStyles(props, stylesCallback);
 
   return (
     <div>
       <AppBar position={'fixed'}>
-        <Container className={classes.container} style={{ padding: 0 }}>
+        <Container sx={{ width: ['100%', '100%', 900, 1200], padding: 0 }}>
           <Toolbar>
             <Header headerData={getHeaderData(location)} />
           </Toolbar>
         </Container>
       </AppBar>
       <Toolbar />
-      <Container className={classes.container} style={{ paddingTop: 10 }}>
+      <Container sx={{ width: ['100%', '100%', 900, 1200], paddingTop: 10 }}>
         <main>
           <ScreenRoutes />
         </main>

@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 import { HeaderData } from '../../types/header-data';
-import { Hidden, SvgIcon } from '@material-ui/core';
+import { Hidden, SvgIcon } from '@mui/material';
 import { ArrowLeftBox, ArrowRightBox, Home } from 'mdi-material-ui';
 import { Link } from 'react-router-dom';
 

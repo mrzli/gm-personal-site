@@ -1,13 +1,13 @@
 import React from 'react';
-import { createMuiTheme, MuiThemeProvider, Theme } from '@material-ui/core';
+import { createTheme, ThemeProvider, Theme } from '@mui/material';
 
 export function createAppMuiTheme(): Theme {
-  return createMuiTheme();
+  return createTheme();
 }
 
 export function wrapWithTheme(
   component: React.ReactElement,
   theme: Theme
 ): React.ReactElement {
-  return <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>;
+  return <ThemeProvider theme={theme}>{component}</ThemeProvider>;
 }

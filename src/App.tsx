@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from './components/base/Layout';
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline } from '@mui/material';
 
 export function App(): React.ReactElement {
   return (

@@ -5,7 +5,7 @@ import profileImage from '../../assets/images/profile.jpg';
 import { LABEL_URL_PAIRS } from '../../data/label-url-pairs';
 import { Link } from 'react-router-dom';
 import { Linkedin, Github, StackOverflow } from 'mdi-material-ui';
-import { SvgIcon } from '@material-ui/core';
+import { SvgIcon } from '@mui/material';
 
 export function IntroScreen(): React.ReactElement {
   const linkStyles: CSSProperties = {
@@ -75,16 +75,22 @@ export function IntroScreen(): React.ReactElement {
               href={'https://www.linkedin.com/in/goran-mrzljak'}
               style={linkStyles}
             >
-              <SvgIcon component={Linkedin} fontSize={'large'} />
+              <SvgIcon fontSize={'large'}>
+                <Linkedin />
+              </SvgIcon>
             </a>
             <a href={'https://github.com/mrzli'} style={linkStyles}>
-              <SvgIcon component={Github} fontSize={'large'} />
+              <SvgIcon fontSize={'large'}>
+                <Github />
+              </SvgIcon>
             </a>
             <a
               href={'https://stackoverflow.com/users/520229/mrzli'}
               style={linkStyles}
             >
-              <SvgIcon component={StackOverflow} fontSize={'large'} />
+              <SvgIcon fontSize={'large'}>
+                <StackOverflow />
+              </SvgIcon>
             </a>
           </div>
         </div>
