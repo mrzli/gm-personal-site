@@ -9,7 +9,7 @@ import {
   createStyles,
   StyleRules,
   Theme,
-  Toolbar
+  Toolbar,
 } from '@material-ui/core';
 import { useStyles } from '../../utils/ui-hooks';
 import { ScreenRoutes } from './ScreenRoutes';
@@ -23,15 +23,15 @@ function stylesCallback(theme: Theme): StyleRules<ClassKey, LayoutProps> {
   return createStyles<ClassKey, LayoutProps>({
     container: {
       [theme.breakpoints.down('sm')]: {
-        maxWidth: '100%'
+        maxWidth: '100%',
       },
       [theme.breakpoints.only('md')]: {
-        maxWidth: 900
+        maxWidth: 900,
       },
       [theme.breakpoints.up('lg')]: {
-        maxWidth: 1200
-      }
-    }
+        maxWidth: 1200,
+      },
+    },
   });
 }
 
@@ -66,7 +66,7 @@ function getHeaderData(location: Location): HeaderData {
   if (labelUrlPairIndex === -1) {
     return {
       navigatePreviousData: undefined,
-      navigateNextData: undefined
+      navigateNextData: undefined,
     };
   }
 
@@ -74,19 +74,19 @@ function getHeaderData(location: Location): HeaderData {
     labelUrlPairIndex > 0
       ? {
           text: LABEL_URL_PAIRS[labelUrlPairIndex - 1].label,
-          link: LABEL_URL_PAIRS[labelUrlPairIndex - 1].url
+          link: LABEL_URL_PAIRS[labelUrlPairIndex - 1].url,
         }
       : undefined;
   const nextData =
     labelUrlPairIndex < LABEL_URL_PAIRS.length - 1
       ? {
           text: LABEL_URL_PAIRS[labelUrlPairIndex + 1].label,
-          link: LABEL_URL_PAIRS[labelUrlPairIndex + 1].url
+          link: LABEL_URL_PAIRS[labelUrlPairIndex + 1].url,
         }
       : undefined;
 
   return {
     navigatePreviousData: previousData,
-    navigateNextData: nextData
+    navigateNextData: nextData,
   };
 }

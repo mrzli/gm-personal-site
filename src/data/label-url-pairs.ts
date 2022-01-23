@@ -3,19 +3,19 @@ import { LabelUrlPair } from '../types/label-url-pair';
 export const LABEL_URL_PAIRS: readonly LabelUrlPair[] = [
   {
     label: 'Intro',
-    url: '/'
+    url: '/',
   },
   {
     label: 'Work History',
-    url: '/work-history'
+    url: '/work-history',
   },
   {
     label: 'Education',
-    url: '/education'
+    url: '/education',
   },
   {
     label: 'Skills Overview',
-    url: '/skills-overview'
+    url: '/skills-overview',
   },
   // {
   //   label: 'Pros & Cons',
@@ -23,10 +23,10 @@ export const LABEL_URL_PAIRS: readonly LabelUrlPair[] = [
   // },
   {
     label: 'Personal Projects',
-    url: '/personal-projects'
+    url: '/personal-projects',
   },
   {
     label: 'Personal Info',
-    url: '/personal-info'
-  }
+    url: '/personal-info',
+  },
 ];

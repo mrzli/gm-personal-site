@@ -2,7 +2,7 @@ import { StyleRulesCallback, Theme } from '@material-ui/core';
 import {
   ClassNameMap,
   makeStyles,
-  WithStylesOptions
+  WithStylesOptions,
 } from '@material-ui/styles';
 import { AnyObject } from '../types/generic/generic-types';
 

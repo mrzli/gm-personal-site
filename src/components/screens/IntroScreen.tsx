@@ -9,7 +9,7 @@ import { SvgIcon } from '@material-ui/core';
 
 export function IntroScreen(): React.ReactElement {
   const linkStyles: CSSProperties = {
-    color: '#424242'
+    color: '#424242',
   };
 
   return (
@@ -20,7 +20,7 @@ export function IntroScreen(): React.ReactElement {
           display: 'grid',
           gridTemplateRows: 'auto',
           gridTemplateColumns: 'auto 1fr',
-          columnGap: 20
+          columnGap: 20,
         }}
       >
         <div style={{ gridColumn: 1 }}>{getImageElement()}</div>
@@ -30,19 +30,19 @@ export function IntroScreen(): React.ReactElement {
             alignContent: 'center',
             gridTemplateRows: 'repeat(4, auto)',
             gridTemplateColumns: '1fr',
-            rowGap: 10
+            rowGap: 10,
           }}
         >
           <div style={{ gridRow: 1, fontSize: '1.2em' }}>Goran Mržljak</div>
           <div
             style={{
-              gridRow: 2
+              gridRow: 2,
             }}
           >
             <a
               href={'tel:+385 91 224 3145'}
               style={{
-                color: '#E91D63'
+                color: '#E91D63',
               }}
             >
               +385 91 224 3145
@@ -50,13 +50,13 @@ export function IntroScreen(): React.ReactElement {
           </div>
           <div
             style={{
-              gridRow: 3
+              gridRow: 3,
             }}
           >
             <a
               href={'mailto:goran.mrzljak@gmail.com'}
               style={{
-                color: '#E91D63'
+                color: '#E91D63',
               }}
             >
               goran.mrzljak@gmail.com
@@ -68,7 +68,7 @@ export function IntroScreen(): React.ReactElement {
               display: 'grid',
               columnGap: 10,
               gridTemplateColumns: 'repeat(3, auto)',
-              justifyContent: 'start'
+              justifyContent: 'start',
             }}
           >
             <a
@@ -173,7 +173,7 @@ function getImageElement(): React.ReactElement {
         border: '5px solid #F0F0F0',
         overflow: 'hidden',
         width: 180,
-        height: 180
+        height: 180,
       }}
     />
   );

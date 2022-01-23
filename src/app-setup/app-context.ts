@@ -7,7 +7,7 @@ export interface AppContextData {
 
 export function createAppContextData(globals: AppGlobals): AppContextData {
   return {
-    globals
+    globals,
   };
 }
 

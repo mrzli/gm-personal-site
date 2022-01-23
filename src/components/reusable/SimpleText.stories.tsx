@@ -4,12 +4,12 @@ import { SimpleText, SimpleTextProps } from './SimpleText';
 
 export default {
   title: 'Components/Reusable/Simple Text',
-  component: SimpleText
+  component: SimpleText,
 } as Meta;
 
 const Template: Story<SimpleTextProps> = (args) => <SimpleText {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {
-  children: 'SimpleText'
+  children: 'SimpleText',
 };

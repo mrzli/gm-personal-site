@@ -8,6 +8,6 @@ export function createAppGlobals(): AppGlobals {
   const env = getAppEnv();
 
   return {
-    env
+    env,
   };
 }

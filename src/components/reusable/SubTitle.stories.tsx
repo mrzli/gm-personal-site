@@ -4,12 +4,12 @@ import { SubTitle, SubTitleProps } from './SubTitle';
 
 export default {
   title: 'Components/Reusable/Sub-Title',
-  component: SubTitle
+  component: SubTitle,
 } as Meta;
 
 const Template: Story<SubTitleProps> = (args) => <SubTitle {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {
-  children: 'SubTitle'
+  children: 'SubTitle',
 };

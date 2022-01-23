@@ -2,7 +2,7 @@ import React from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import {
   createAppMuiTheme,
-  wrapWithTheme
+  wrapWithTheme,
 } from '../../app-setup/create-app-mui-theme';
 import { AppContextData } from '../../app-setup/app-context';
 import { wrapComponent } from '../../app-setup/create-app-utils';

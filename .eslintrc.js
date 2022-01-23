@@ -8,7 +8,6 @@ module.exports = {
     "react-app",
     "react-app/jest",
     "plugin:prettier/recommended",
-    "prettier/react"
     // "eslint:all",
     // "plugin:@typescript-eslint/all",
     // "plugin:react/all"

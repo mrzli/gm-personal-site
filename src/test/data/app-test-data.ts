@@ -4,13 +4,13 @@ import { AppEnv } from '../../app-setup/app-env';
 
 export function createTestAppContextData(): AppContextData {
   return {
-    globals: createTestAppGlobals()
+    globals: createTestAppGlobals(),
   };
 }
 
 export function createTestAppGlobals(): AppGlobals {
   return {
-    env: createTestAppEnv()
+    env: createTestAppEnv(),
   };
 }
 
@@ -19,6 +19,6 @@ export function createTestAppEnv(): AppEnv {
     BASE_URL: '',
     NODE_ENV: '',
     PUBLIC_URL: '',
-    REACT_APP_BASE_URL: ''
+    REACT_APP_BASE_URL: '',
   };
 }

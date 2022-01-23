@@ -9,7 +9,7 @@ export function Title(props: TitleProps): React.ReactElement {
     textTransform: 'uppercase',
     color: '#424242',
     fontSize: '18px',
-    marginTop: '1.2em'
+    marginTop: '1.2em',
   };
 
   return <h1 style={styles}>{props.children}</h1>;

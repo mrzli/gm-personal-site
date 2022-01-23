@@ -16,17 +16,17 @@ export function Header(props: HeaderProps): React.ReactElement {
     fontSize: '1.8em',
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   };
 
   const prevNextStyles: CSSProperties = {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   };
 
   const linkStyles: CSSProperties = {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   };
 
   return (
