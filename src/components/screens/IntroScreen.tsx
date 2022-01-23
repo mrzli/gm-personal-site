@@ -6,6 +6,7 @@ import { LABEL_URL_PAIRS } from '../../data/label-url-pairs';
 import { Link } from 'react-router-dom';
 import { Linkedin, Github, StackOverflow } from 'mdi-material-ui';
 import { SvgIcon } from '@mui/material';
+import { GmLink } from '../reusable/GmLink';
 
 export function IntroScreen(): React.ReactElement {
   const linkStyles: CSSProperties = {
@@ -39,28 +40,28 @@ export function IntroScreen(): React.ReactElement {
               gridRow: 2,
             }}
           >
-            <a
+            <GmLink
               href={'tel:+385 91 224 3145'}
               style={{
                 color: '#E91D63',
               }}
             >
               +385 91 224 3145
-            </a>
+            </GmLink>
           </div>
           <div
             style={{
               gridRow: 3,
             }}
           >
-            <a
+            <GmLink
               href={'mailto:goran.mrzljak@gmail.com'}
               style={{
                 color: '#E91D63',
               }}
             >
               goran.mrzljak@gmail.com
-            </a>
+            </GmLink>
           </div>
           <div
             style={{
@@ -71,27 +72,33 @@ export function IntroScreen(): React.ReactElement {
               justifyContent: 'start',
             }}
           >
-            <a
+            <GmLink
               href={'https://www.linkedin.com/in/goran-mrzljak'}
               style={linkStyles}
+              openInNewTab={true}
             >
               <SvgIcon fontSize={'large'}>
                 <Linkedin />
               </SvgIcon>
-            </a>
-            <a href={'https://github.com/mrzli'} style={linkStyles}>
+            </GmLink>
+            <GmLink
+              href={'https://github.com/mrzli'}
+              style={linkStyles}
+              openInNewTab={true}
+            >
               <SvgIcon fontSize={'large'}>
                 <Github />
               </SvgIcon>
-            </a>
-            <a
+            </GmLink>
+            <GmLink
               href={'https://stackoverflow.com/users/520229/mrzli'}
               style={linkStyles}
+              openInNewTab={true}
             >
               <SvgIcon fontSize={'large'}>
                 <StackOverflow />
               </SvgIcon>
-            </a>
+            </GmLink>
           </div>
         </div>
       </div>
@@ -118,9 +125,13 @@ export function IntroScreen(): React.ReactElement {
           Throughout my career I have also worked quite a bit on the backend
           with Spring (using both Java and Kotlin). For more details, and for
           other experience that I have, check&nbsp;
-          <a href={'/work-history'} className={'gm-link'}>
+          <GmLink
+            href={'/work-history'}
+            classes={'gm-link'}
+            openInNewTab={true}
+          >
             Work History
-          </a>
+          </GmLink>
           .
         </p>
       </SimpleText>

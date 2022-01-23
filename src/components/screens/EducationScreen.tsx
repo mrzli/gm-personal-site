@@ -2,16 +2,21 @@ import React from 'react';
 import { Title } from '../reusable/Title';
 import { SubTitle } from '../reusable/SubTitle';
 import { SimpleText } from '../reusable/SimpleText';
+import { GmLink } from '../reusable/GmLink';
 
 export function EducationScreen(): React.ReactElement {
   return (
     <div>
       <Title>Formal Education</Title>
       <SubTitle>
-        <a href={'https://www.fer.unizg.hr/en'} className={'gm-link'}>
+        <GmLink
+          href={'https://www.fer.unizg.hr/en'}
+          classes={'gm-link'}
+          openInNewTab={true}
+        >
           Faculty of Electrical Engineering and Computing (FER), University of
           Zagreb
-        </a>
+        </GmLink>
         <span style={{ fontWeight: 'normal' }}>
           &nbsp;- Graduate Engineer of Computing
         </span>
@@ -37,38 +42,45 @@ export function EducationScreen(): React.ReactElement {
         </p>
         <ul>
           <li>
-            <a
+            <GmLink
               href={
                 'http://www.zemris.fer.hr/predmeti/rg/diplomski/08Mrzljak/bvhviewer_pages/html/index.html'
               }
-              className={'gm-link'}
+              classes={'gm-link'}
+              openInNewTab={true}
             >
               Short summary of the thesis on the Faculty's site
-            </a>
+            </GmLink>
           </li>
           <li>
-            <a
+            <GmLink
               href={
                 'http://www.zemris.fer.hr/predmeti/rg/diplomski/08Mrzljak/bvhviewer_pages/html/files/Diplomski.doc'
               }
-              className={'gm-link'}
+              classes={'gm-link'}
+              openInNewTab={true}
             >
               Full thesis (.doc file)
-            </a>
+            </GmLink>
           </li>
           <li>
-            <a
+            <GmLink
               href={'https://github.com/mrzli/bvhviewer'}
-              className={'gm-link'}
+              classes={'gm-link'}
+              openInNewTab={true}
             >
               GitHub link to the source code for the application created for the
               thesis
-            </a>
+            </GmLink>
           </li>
           <li>
-            <a href={'https://youtu.be/7u4C-OBQZIk'} className={'gm-link'}>
+            <GmLink
+              href={'https://youtu.be/7u4C-OBQZIk'}
+              classes={'gm-link'}
+              openInNewTab={true}
+            >
               Short video showing what the thesis app looks like
-            </a>
+            </GmLink>
           </li>
         </ul>
       </SimpleText>

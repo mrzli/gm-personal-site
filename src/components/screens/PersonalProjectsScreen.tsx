@@ -2,6 +2,7 @@ import React from 'react';
 import { Title } from '../reusable/Title';
 import { SimpleText } from '../reusable/SimpleText';
 import { SubTitle } from '../reusable/SubTitle';
+import { GmLink } from '../reusable/GmLink';
 
 export function PersonalProjectsScreen(): React.ReactElement {
   return (
@@ -12,16 +13,21 @@ export function PersonalProjectsScreen(): React.ReactElement {
       <SimpleText>
         <p>
           Simple website for displaying my professional info (
-          <a href={'https://mrzli.github.io/'} className={'gm-link'}>
+          <GmLink
+            href={'https://mrzli.github.io/'}
+            classes={'gm-link'}
+            openInNewTab={true}
+          >
             Site
-          </a>
+          </GmLink>
           ,&nbsp;
-          <a
+          <GmLink
             href={'https://github.com/mrzli/mrzli.github.io'}
-            className={'gm-link'}
+            classes={'gm-link'}
+            openInNewTab={true}
           >
             Source
-          </a>
+          </GmLink>
           ):
         </p>
         <ul>
@@ -44,9 +50,13 @@ export function PersonalProjectsScreen(): React.ReactElement {
         <p>
           A clone of a popular game called "Doodle Jump". Complete and fully
           featured (
-          <a href={'https://github.com/mrzli/tria'} className={'gm-link'}>
+          <GmLink
+            href={'https://github.com/mrzli/tria'}
+            classes={'gm-link'}
+            openInNewTab={true}
+          >
             Source
-          </a>
+          </GmLink>
           ).
         </p>
         <ul>
@@ -67,9 +77,13 @@ export function PersonalProjectsScreen(): React.ReactElement {
       <SimpleText>
         <p>
           A more primitive predecessor of 'Symbol Jump' (
-          <a href={'https://github.com/mrzli/hellhopper'} className={'gm-link'}>
+          <GmLink
+            href={'https://github.com/mrzli/hellhopper'}
+            classes={'gm-link'}
+            openInNewTab={true}
+          >
             Source
-          </a>
+          </GmLink>
           ).
         </p>
         <ul>
@@ -81,12 +95,13 @@ export function PersonalProjectsScreen(): React.ReactElement {
       <SimpleText>
         <p>
           Tetris clone, available for Android and desktop (
-          <a
+          <GmLink
             href={'https://github.com/mrzli/suchyblocks'}
-            className={'gm-link'}
+            classes={'gm-link'}
+            openInNewTab={true}
           >
             Source
-          </a>
+          </GmLink>
           ).
         </p>
         <ul>

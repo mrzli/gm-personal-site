@@ -2,6 +2,7 @@ import React from 'react';
 import { Title } from '../reusable/Title';
 import { SubTitle } from '../reusable/SubTitle';
 import { SimpleText } from '../reusable/SimpleText';
+import { GmLink } from '../reusable/GmLink';
 
 export function WorkHistoryScreen(): React.ReactElement {
   return (
@@ -211,9 +212,13 @@ export function WorkHistoryScreen(): React.ReactElement {
         </ul>
       </SimpleText>
       <SubTitle>
-        <a href={'https://apis-it.hr'} className={'gm-link'}>
+        <GmLink
+          href={'https://apis-it.hr'}
+          classes={'gm-link'}
+          openInNewTab={true}
+        >
           APIS IT
-        </a>
+        </GmLink>
         <span>, Zagreb (Croatia)</span>
         <span style={{ fontWeight: 'normal' }}>&nbsp;- C# Developer</span>
       </SubTitle>
@@ -284,9 +289,13 @@ export function WorkHistoryScreen(): React.ReactElement {
         </ul>
       </SimpleText>
       <SubTitle>
-        <a href={'https://www.gemboxsoftware.com/'} className={'gm-link'}>
+        <GmLink
+          href={'https://www.gemboxsoftware.com/'}
+          classes={'gm-link'}
+          openInNewTab={true}
+        >
           Gemmeus d.o.o.
-        </a>
+        </GmLink>
         <span>, Remote</span>
         <span style={{ fontWeight: 'normal' }}>&nbsp;- C# Developer</span>
       </SubTitle>
@@ -307,9 +316,13 @@ export function WorkHistoryScreen(): React.ReactElement {
         </ul>
       </SimpleText>
       <SubTitle>
-        <a href={'https://www.inetec.hr/en'} className={'gm-link'}>
+        <GmLink
+          href={'https://www.inetec.hr/en'}
+          classes={'gm-link'}
+          openInNewTab={true}
+        >
           INETEC – Institute for Nuclear Technology d.o.o.
-        </a>
+        </GmLink>
         <span>, Zagreb (Croatia)</span>
         <span style={{ fontWeight: 'normal' }}>
           &nbsp;- C# Windows Desktop (WPF) Developer
@@ -394,9 +407,13 @@ export function WorkHistoryScreen(): React.ReactElement {
         </p>
       </SimpleText>
       <SubTitle>
-        <a href={'https://ekobit.com/'} className={'gm-link'}>
+        <GmLink
+          href={'https://ekobit.com/'}
+          classes={'gm-link'}
+          openInNewTab={true}
+        >
           Ekobit d.o.o.
-        </a>
+        </GmLink>
         <span>, Zagreb (Croatia)</span>
         <span style={{ fontWeight: 'normal' }}>&nbsp;- C# Web Developer</span>
       </SubTitle>
@@ -423,9 +440,13 @@ export function WorkHistoryScreen(): React.ReactElement {
         <p>
           Body animation exporter, part of a larger system being made for a
           company called&nbsp;
-          <a href={'https://visagetechnologies.com/'} className={'gm-link'}>
+          <GmLink
+            href={'https://visagetechnologies.com/'}
+            classes={'gm-link'}
+            openInNewTab={true}
+          >
             Visage Technologies
-          </a>
+          </GmLink>
           :
         </p>
         <ul>
