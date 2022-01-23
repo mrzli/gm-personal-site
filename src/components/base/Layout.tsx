@@ -20,7 +20,9 @@ export function Layout(): React.ReactElement {
         </Container>
       </AppBar>
       <Toolbar />
-      <Container sx={{ width: ['100%', '100%', 900, 1200], paddingTop: 10 }}>
+      <Container
+        sx={{ width: ['100%', '100%', 900, 1200], paddingTop: '10px' }}
+      >
         <main>
           <ScreenRoutes />
         </main>
