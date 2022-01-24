@@ -16,11 +16,41 @@ export function WorkHistoryScreen(): React.ReactElement {
       </SubTitle>
       <SimpleText>
         <p>JANUARY 2016 - PRESENT</p>
-        {/*<p>TODO: large project</p>*/}
-        {/*<ul>*/}
-        {/*  <li>Techs used:</li>*/}
-        {/*  <li>What I did</li>*/}
-        {/*</ul>*/}
+        <p>
+          A very large project used for managing the business and operations of
+          a market leading mobile fueling company from California (company has
+          several hundred employees and exponential growth). Project involved
+          dozens of developers. As part of the system, there are several web
+          applications built with React and Angular, mobile applications (both
+          iOS and Android), with backend being mostly written in Node (Express).
+        </p>
+        <ul>
+          <li>
+            Techs used: Angular, NgRx, Typescript, Mocha, Node, Express, Nx,
+            ESLint, Prettier, Mongo
+          </li>
+          <li>
+            My role: I was a senior full-stack developer (with more focus on the
+            backend). In addition to technical work, I was also involved with
+            onboarding and mentoring new employees, and interviewing potential
+            candidates. Our work was on a system that is fully in production,
+            and company depends on it working. We implemented the practice of
+            continuous integration. In addition to adding new features and
+            solving technical issues, I had ownership of disparate parts of the
+            system, I was involved (and sometimes was the primary evangelist) in
+            initiatives related to code quality improvements, such as changes to
+            the way we do unit testing and introduction of monorepo. On occasion
+            I was required to do code changes that would effect the functioning
+            of the entire system, and (in cooperation with other developers and
+            PMs) was able to do that without significant issues. I was also
+            required to do occasional migrations on a production Mongo database,
+            and with careful testing and work process was able to do that
+            without any errors during my time at the company. Most of my
+            technical work was on the backend node application (all the way from
+            the API down to the database), and a smaller part of my job was
+            working on an admin web app written in Angular.
+          </li>
+        </ul>
         <p>
           A medium sized web application (100 kloc frontend) in the insurance
           domain that is built for a UK client. The app facilitates connection

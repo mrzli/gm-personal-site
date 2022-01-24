@@ -123,11 +123,14 @@ export function IntroScreen(): React.ReactElement {
             mostly (or completely) on either frontend or backend.
           </li>
           <li>Have experience with React, Angular on Vue (in that order).</li>
+          <li>Prefer React, but would consider an Angular position.</li>
           <li>
-            Prefer React, and would only consider working with React in case of
-            a purely frontend position.
+            I have significant backend experience with Node/Express/Nest. This
+            is my technology of choice for the backen.
           </li>
-          <li>I have significant backend experience with Node/Express/Nest.</li>
+          <li>
+            Secondary option for backend is Spring Boot with Kotlin or Java.
+          </li>
         </ul>
       </SimpleText>
       <Title>Other Sections</Title>
