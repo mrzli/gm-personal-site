@@ -104,67 +104,31 @@ export function IntroScreen(): React.ReactElement {
       </div>
       <Title>Professional Profile</Title>
       <SimpleText>
-        <p>
-          I am a software developer with more than 12 years of professional
-          software development experience. I have extensive experience with a
-          wide range of technologies and stacks, but I am now primarily building
-          web applications.
-        </p>
-        <p>
-          You can say I am a full-stack developer, although on most projects I
-          will focus mostly or completely on either frontend or backend. On
-          smaller projects I will do both.
-        </p>
-        <p>
-          Recently I have been doing mostly frontend, with the most recent
-          project (as of December 2020) being done with React. I also have
-          significant experience with the rest of the Big Three (Angular and
-          Vue), but I prefer React.
-        </p>
-        <p>
-          Throughout my career I have also worked quite a bit on the backend
-          with Spring (using both Java and Kotlin). For more details, and for
-          other experience that I have, check&nbsp;
-          <GmLink
-            href={'/work-history'}
-            classes={'gm-link'}
-            openInNewTab={true}
-          >
-            Work History
-          </GmLink>
-          .
-        </p>
-      </SimpleText>
-      <Title>Current Professional Interests (techs, type of work)</Title>
-      <SimpleText>
-        <p>
-          I am interested in either <b>frontend or backend web development</b>.
-          I currently have no plans on doing work on other platforms (like
-          desktop or mobile), but this is not set in stone.
-        </p>
-        <p>
-          In terms of frontend development, I am interested primarily in{' '}
-          <b>React</b>, and will probably not be looking for projects that are
-          built using other frontend frameworks.
-        </p>
-        <p>
-          Regarding backend, I am interested in either <b>Node.js</b>, or{' '}
-          <b>Spring</b> (with a preference for <b>Kotlin</b>, but not a big deal
-          if it is <b>Java</b>). I don't have a lot of formal Node.js experience
-          on the backend, but I like it from what I have seen, and I know for
-          sure I can immediately get into a Node.js project (a lot of
-          overlapping knowledge with frontend use of Node/NPM, Typescript,
-          linting, testing, and also with other backend stacks).
-        </p>
-        <p>
-          I am a freelancer and I use an LLC (more precisely a Croatian
-          equivalent called "d.o.o.") as a platform for doing business. I
-          prefer&nbsp;<b>B2B</b> contracts and will usually not accept work if
-          the condition is a standard employment contract. This refers to the
-          form of the relationship, I have no problem doing a full 40h/week
-          workload for a single client - in recent projects this was usually the
-          case.
-        </p>
+        <ul>
+          <li>14+ years of professional software development experience.</li>
+          <li>
+            Have experience with onboarding new developers, mentoring, and
+            interviewing potential candidates.
+          </li>
+          <li>
+            Mostly web development recently, but previously had experience with
+            wide range of technologies - see&nbsp;
+            <GmLink href={'/work-history'} classes={'gm-link'}>
+              work history
+            </GmLink>
+            &nbsp;for more details.
+          </li>
+          <li>
+            Full stack development, but also worked on projects where I focus
+            mostly (or completely) on either frontend or backend.
+          </li>
+          <li>Have experience with React, Angular on Vue (in that order).</li>
+          <li>
+            Prefer React, and would only consider working with React in case of
+            a purely frontend position.
+          </li>
+          <li>I have significant backend experience with Node/Express/Nest.</li>
+        </ul>
       </SimpleText>
       <Title>Other Sections</Title>
       <ul>

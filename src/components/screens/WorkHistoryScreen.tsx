@@ -16,6 +16,11 @@ export function WorkHistoryScreen(): React.ReactElement {
       </SubTitle>
       <SimpleText>
         <p>JANUARY 2016 - PRESENT</p>
+        {/*<p>TODO: large project</p>*/}
+        {/*<ul>*/}
+        {/*  <li>Techs used:</li>*/}
+        {/*  <li>What I did</li>*/}
+        {/*</ul>*/}
         <p>
           A medium sized web application (100 kloc frontend) in the insurance
           domain that is built for a UK client. The app facilitates connection

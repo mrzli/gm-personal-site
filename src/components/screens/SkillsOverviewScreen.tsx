@@ -16,13 +16,16 @@ export function SkillsOverviewScreen(): React.ReactElement {
             etc.)
           </li>
           <li>TypeScript</li>
-          <li>Kotlin</li>
-          <li>Java</li>
         </ul>
         <p>Libraries, Frameworks, Platforms, Tools:</p>
         <ul>
           <li>React</li>
           <li>Angular</li>
+          <li>Node</li>
+          <li>Express</li>
+          <li>NestJS</li>
+          <li>ESLint, Prettier</li>
+          <li>NX (monorepo)</li>
           <li>RxJS</li>
           <li>Jest</li>
           <li>React Testing Library</li>
@@ -30,17 +33,19 @@ export function SkillsOverviewScreen(): React.ReactElement {
           <li>Storybook</li>
           <li>Redux, redux-observable</li>
           <li>Material-UI (UI component library for React)</li>
-          <li>NPM</li>
-          <li>Spring Boot</li>
-          <li>JPA/Hibernate</li>
-          <li>Liquibase</li>
-          <li>Maven</li>
+          <li>Zod (validation)</li>
+          <li>NPM (obviously)</li>
           <li>...</li>
         </ul>
         <p>Databases:</p>
         <ul>
+          <li>Mongo</li>
           <li>PostreSQL</li>
-          <li>H2</li>
+        </ul>
+        <p>CI/CD:</p>
+        <ul>
+          <li>Github Actions</li>
+          <li>Heroku</li>
         </ul>
         <p>Source Control:</p>
         <ul>
@@ -52,15 +57,21 @@ export function SkillsOverviewScreen(): React.ReactElement {
           <li>Intellij IDEA</li>
         </ul>
       </SimpleText>
-      <SubTitle>Non-recent Experience</SubTitle>
+      <SubTitle>Previous Experience</SubTitle>
       <SimpleText>
         <p>Programming Languages:</p>
         <ul>
+          <li>Kotlin</li>
+          <li>Java</li>
           <li>C#</li>
           <li>C++</li>
         </ul>
         <p>Libraries, Frameworks, Platforms, Tools:</p>
         <ul>
+          <li>Spring Boot</li>
+          <li>JPA/Hibernate</li>
+          <li>Liquibase</li>
+          <li>Maven</li>
           <li>Vue</li>
           <li>Vuetify (UI component library for Vue)</li>
           <li>AngularJS</li>
@@ -72,6 +83,7 @@ export function SkillsOverviewScreen(): React.ReactElement {
         </ul>
         <p>Databases:</p>
         <ul>
+          <li>H2</li>
           <li>SQLite</li>
           <li>Microsoft SQL Server</li>
         </ul>
@@ -100,7 +112,7 @@ export function SkillsOverviewScreen(): React.ReactElement {
         <p>Libraries, Frameworks, Platforms, Tools:</p>
         <ul>
           <li>Cypress</li>
-          <li>Express</li>
+          <li>GraphQL</li>
           <li>Android SDK</li>
           <li>libGDX</li>
           <li>Docker</li>
@@ -111,6 +123,10 @@ export function SkillsOverviewScreen(): React.ReactElement {
           <li>MySql</li>
           <li>IBM Db2</li>
           <li>Oracle</li>
+        </ul>
+        <p>CI/CD:</p>
+        <ul>
+          <li>CircleCI</li>
         </ul>
         <p>IDEs:</p>
         <ul>
