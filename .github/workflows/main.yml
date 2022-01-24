@@ -18,6 +18,8 @@ jobs:
           key: cache-node-modules-${{ hashFiles('package-lock.json') }}
       - name: Setup Node
         uses: actions/setup-node@v2
+      - name: Npm Install
+        run: npm ci
       - name: Deploy with gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
