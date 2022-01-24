@@ -22,7 +22,7 @@ export function WorkHistoryScreen(): React.ReactElement {
           several hundred employees and exponential growth). Project involved
           dozens of developers. As part of the system, there are several web
           applications built with React and Angular, mobile applications (both
-          iOS and Android), with backend being mostly written in Node (Express).
+          iOS and Android), with backend being mostly written in Node (Express):
         </p>
         <ul>
           <li>
