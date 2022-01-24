@@ -7,6 +7,8 @@ on:
 jobs:
   install-deps:
     runs-on: ubuntu-latest
+    env:
+      FORCE_CACHE_RESET: false
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -17,8 +19,10 @@ jobs:
           path: node_modules
           key: cache-node-modules-${{ hashFiles('package-lock.json') }}
       - name: Setup Node
+        if: steps.cache.outputs.cache-hit != 'true' || env.FORCE_CACHE_RESET == 'true'
         uses: actions/setup-node@v2
       - name: Npm Install
+        if: steps.cache.outputs.cache-hit != 'true' || env.FORCE_CACHE_RESET == 'true'
         run: npm ci
       - name: Deploy with gh-pages
         run: |
