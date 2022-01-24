@@ -27,7 +27,7 @@ export function WorkHistoryScreen(): React.ReactElement {
         <ul>
           <li>
             Techs used: Angular, NgRx, Typescript, Mocha, Node, Express, Nx,
-            ESLint, Prettier, Mongo
+            ESLint, Prettier, Mongo.
           </li>
           <li>
             My role: I was a senior full-stack developer (with more focus on the
@@ -60,7 +60,7 @@ export function WorkHistoryScreen(): React.ReactElement {
         <ul>
           <li>
             Techs used: React, TypeScript, Jest, Webpack, Storybook, React
-            Testing Library, Material-UI, Redux/redux-observable/RxJS, Cypress
+            Testing Library, Material-UI, Redux/redux-observable/RxJS, Cypress.
           </li>
           <li>
             My role: I got onto the project after it was in development for
@@ -87,7 +87,7 @@ export function WorkHistoryScreen(): React.ReactElement {
           complicated logic, forms and data display/editing:
         </p>
         <ul>
-          <li>Techs used: Angular, TypeScript, Jest, RxJS, ag-Grid</li>
+          <li>Techs used: Angular, TypeScript, Jest, RxJS, ag-Grid.</li>
           <li>
             My role: I worked exclusively on the frontend. A colleague and I did
             not get on board of this project from the start, but we did get on
@@ -138,7 +138,7 @@ export function WorkHistoryScreen(): React.ReactElement {
         <ul>
           <li>
             Tech used: Java, and a company-internal framework for web
-            development
+            development.
           </li>
           <li>
             My role: I implemented the "middle" part of the app - the part that
@@ -161,7 +161,7 @@ export function WorkHistoryScreen(): React.ReactElement {
           ways):
         </p>
         <ul>
-          <li>Tech used: Java, JSP, SOAP</li>
+          <li>Tech used: Java, JSP, SOAP.</li>
           <li>My role: I did the entire implementation of this interface.</li>
         </ul>
         <p>
@@ -178,7 +178,7 @@ export function WorkHistoryScreen(): React.ReactElement {
           any) with all the relevant data for each issue:
         </p>
         <ul>
-          <li>Tech used: Java, JUnit</li>
+          <li>Tech used: Java, JUnit.</li>
           <li>
             My role: I created the entire component with extensive automated
             tests. Since the inputs and outputs were so clearly defined, and the
@@ -231,7 +231,7 @@ export function WorkHistoryScreen(): React.ReactElement {
         <ul>
           <li>
             Simple service used for exporting data from database in JSON format,
-            built using C# and WCF. The targed database is Microsoft SQL Server.
+            built using C# and WCF. The target database is Microsoft SQL Server.
           </li>
           <li>
             Some 'emergency' work on an Alfresco based web app for a client very
