@@ -51,7 +51,7 @@ export function PersonalProjectsScreen(): React.ReactElement {
           A clone of a popular game called "Doodle Jump". Complete and fully
           featured (
           <GmLink
-            href={'https://github.com/mrzli/tria'}
+            href={'https://github.com/mrzli-other/tria'}
             classes={'gm-link'}
             openInNewTab={true}
           >
@@ -78,7 +78,7 @@ export function PersonalProjectsScreen(): React.ReactElement {
         <p>
           A more primitive predecessor of 'Symbol Jump' (
           <GmLink
-            href={'https://github.com/mrzli/hellhopper'}
+            href={'https://github.com/mrzli-other/hellhopper'}
             classes={'gm-link'}
             openInNewTab={true}
           >
@@ -96,7 +96,7 @@ export function PersonalProjectsScreen(): React.ReactElement {
         <p>
           Tetris clone, available for Android and desktop (
           <GmLink
-            href={'https://github.com/mrzli/suchyblocks'}
+            href={'https://github.com/mrzli-other/suchyblocks'}
             classes={'gm-link'}
             openInNewTab={true}
           >
