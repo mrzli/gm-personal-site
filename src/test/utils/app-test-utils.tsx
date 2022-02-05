@@ -1,9 +1,5 @@
 import React from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
-import {
-  createAppMuiTheme,
-  wrapWithTheme,
-} from '../../app-setup/create-app-mui-theme';
 import { AppContextData } from '../../app-setup/app-context';
 import { wrapComponent } from '../../app-setup/create-app-utils';
 
@@ -26,11 +22,9 @@ function testComponentWrapper(
   appContextValue: AppContextData,
   initialLocationForMemoryRouter: string
 ): React.ReactElement {
-  const theme = createAppMuiTheme();
   return wrapComponent(
     component,
     appContextValue,
-    theme,
     true,
     initialLocationForMemoryRouter
   );
@@ -40,7 +34,5 @@ export function testStandaloneComponentRender(
   component: React.ReactElement,
   options?: Omit<RenderOptions, 'queries'>
 ): RenderResult {
-  const theme = createAppMuiTheme();
-  const wrappedComponent: React.ReactElement = wrapWithTheme(component, theme);
-  return render(wrappedComponent, options);
+  return render(component, options);
 }

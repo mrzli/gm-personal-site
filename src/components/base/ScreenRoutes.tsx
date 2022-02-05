@@ -5,7 +5,6 @@ import { WorkHistoryScreen } from '../screens/WorkHistoryScreen';
 import { PersonalInfoScreen } from '../screens/PersonalInfoScreen';
 import { EducationScreen } from '../screens/EducationScreen';
 import { SkillsOverviewScreen } from '../screens/SkillsOverviewScreen';
-import { ProsAndConsScreen } from '../screens/ProsAndConsScreen';
 import { PersonalProjectsScreen } from '../screens/PersonalProjectsScreen';
 
 export function ScreenRoutes(): React.ReactElement {
@@ -15,7 +14,6 @@ export function ScreenRoutes(): React.ReactElement {
       <Route path={'/work-history'} element={<WorkHistoryScreen />} />
       <Route path={'/education'} element={<EducationScreen />} />
       <Route path={'/skills-overview'} element={<SkillsOverviewScreen />} />
-      <Route path={'/pros-and-cons'} element={<ProsAndConsScreen />} />
       <Route path={'/personal-projects'} element={<PersonalProjectsScreen />} />
       <Route path={'/personal-info'} element={<PersonalInfoScreen />} />
       <Route path={'*'} element={<IntroScreen />} />

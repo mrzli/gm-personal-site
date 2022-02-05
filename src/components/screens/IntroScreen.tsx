@@ -1,18 +1,15 @@
-import React, { CSSProperties } from 'react';
+import React from 'react';
 import { Title } from '../reusable/Title';
 import { SimpleText } from '../reusable/SimpleText';
 import profileImage from '../../assets/images/profile.jpg';
 import { LABEL_URL_PAIRS } from '../../data/label-url-pairs';
 import { Link } from 'react-router-dom';
-import { Linkedin, Github, StackOverflow } from 'mdi-material-ui';
-import { SvgIcon } from '@mui/material';
+import Icon from '@mdi/react';
+import { mdiLinkedin, mdiGithub, mdiStackOverflow } from '@mdi/js';
 import { GmLink } from '../reusable/GmLink';
+import { GmList } from '../reusable/GmList';
 
 export function IntroScreen(): React.ReactElement {
-  const linkStyles: CSSProperties = {
-    color: '#424242',
-  };
-
   return (
     <div>
       <Title>Name &amp; Contact</Title>
@@ -24,7 +21,15 @@ export function IntroScreen(): React.ReactElement {
           columnGap: 20,
         }}
       >
-        <div style={{ gridColumn: 1 }}>{getImageElement()}</div>
+        <div style={{ gridColumn: 1 }}>
+          <img
+            alt={'Goran Mržljak'}
+            src={profileImage}
+            className={
+              'rounded-full border-4 border-slate-200 w-40 h-40 overflow-hidden'
+            }
+          />
+        </div>
         <div
           style={{
             display: 'grid',
@@ -40,12 +45,7 @@ export function IntroScreen(): React.ReactElement {
               gridRow: 2,
             }}
           >
-            <GmLink
-              href={'tel:+385 91 224 3145'}
-              style={{
-                color: '#E91D63',
-              }}
-            >
+            <GmLink href={'tel:+385 91 224 3145'} classes={'text-pink-500'}>
               +385 91 224 3145
             </GmLink>
           </div>
@@ -56,9 +56,7 @@ export function IntroScreen(): React.ReactElement {
           >
             <GmLink
               href={'mailto:goran.mrzljak@gmail.com'}
-              style={{
-                color: '#E91D63',
-              }}
+              classes={'text-pink-500'}
             >
               goran.mrzljak@gmail.com
             </GmLink>
@@ -74,48 +72,40 @@ export function IntroScreen(): React.ReactElement {
           >
             <GmLink
               href={'https://www.linkedin.com/in/goran-mrzljak'}
-              style={linkStyles}
+              classes={'text-slate-700'}
               openInNewTab={true}
             >
-              <SvgIcon fontSize={'large'}>
-                <Linkedin />
-              </SvgIcon>
+              <Icon path={mdiLinkedin} className={'w-10 h-10'} />
             </GmLink>
             <GmLink
               href={'https://github.com/mrzli'}
-              style={linkStyles}
+              classes={'text-slate-700'}
               openInNewTab={true}
             >
-              <SvgIcon fontSize={'large'}>
-                <Github />
-              </SvgIcon>
+              <Icon path={mdiGithub} className={'w-10 h-10'} />
             </GmLink>
             <GmLink
               href={'https://stackoverflow.com/users/520229/mrzli'}
-              style={linkStyles}
+              classes={'text-slate-700'}
               openInNewTab={true}
             >
-              <SvgIcon fontSize={'large'}>
-                <StackOverflow />
-              </SvgIcon>
+              <Icon path={mdiStackOverflow} className={'w-10 h-10'} />
             </GmLink>
           </div>
         </div>
       </div>
       <Title>Professional Profile</Title>
       <SimpleText>
-        <ul>
+        <GmList>
           <li>14+ years of professional software development experience.</li>
           <li>
             Have experience with onboarding new developers, mentoring, and
             interviewing potential candidates.
           </li>
           <li>
-            Mostly web development recently, but previously had experience with
-            wide range of technologies - see&nbsp;
-            <GmLink href={'/work-history'} classes={'gm-link'}>
-              work history
-            </GmLink>
+            Done mostly web development recently, but previously had experience
+            with wide range of technologies - see&nbsp;
+            <GmLink href={'/work-history'}>work history</GmLink>
             &nbsp;for more details.
           </li>
           <li>
@@ -125,40 +115,22 @@ export function IntroScreen(): React.ReactElement {
           <li>Have experience with React, Angular on Vue (in that order).</li>
           <li>Prefer React, but would consider an Angular position.</li>
           <li>
-            I have significant backend experience with Node/Express/Nest. This
-            is my technology of choice for the backen.
+            I have significant backend experience with Node/Express/Nest. These
+            are my technologies of choice for the backend.
           </li>
           <li>
             Secondary option for backend is Spring Boot with Kotlin or Java.
           </li>
-        </ul>
+        </GmList>
       </SimpleText>
       <Title>Other Sections</Title>
-      <ul>
-        {LABEL_URL_PAIRS.slice(1).map((pair, index) => (
-          <li key={index}>
-            <Link to={pair.url} className={'gm-link'}>
-              {pair.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {LABEL_URL_PAIRS.slice(1).map((pair, index) => (
+        <div key={index}>
+          <Link to={pair.url} className={'underline'}>
+            {pair.label}
+          </Link>
+        </div>
+      ))}
     </div>
-  );
-}
-
-function getImageElement(): React.ReactElement {
-  return (
-    <img
-      alt={'Goran Mržljak'}
-      src={profileImage}
-      style={{
-        borderRadius: '50vh',
-        border: '5px solid #F0F0F0',
-        overflow: 'hidden',
-        width: 180,
-        height: 180,
-      }}
-    />
   );
 }

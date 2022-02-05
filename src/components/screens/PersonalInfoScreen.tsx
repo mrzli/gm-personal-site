@@ -7,13 +7,22 @@ export function PersonalInfoScreen(): React.ReactElement {
     <div>
       <Title>Personal Info</Title>
       <SimpleText>
-        <p>Name: Goran Mržljak</p>
-        <p>Gender: Male</p>
-        <p>Date of Birth: October 27, 1983</p>
-        <p>Place of Birth: Karlovac, Croatia</p>
-        <p>Nationality: Croatian</p>
-        <p>Languages: Croatian (native) and English (fluent)</p>
-        <p>I have a B-category driver's license.</p>
+        <div className={'grid grid-cols-[auto_auto] justify-start gap-x-4'}>
+          <span>Name:</span>
+          <span>Goran Mržljak</span>
+          <span>Gender:</span>
+          <span>Male</span>
+          <span>Date of Birth:</span>
+          <span>October 27, 1983</span>
+          <span>Place of Birth:</span>
+          <span>Karlovac, Croatia</span>
+          <span>Nationality:</span>
+          <span>Croatian</span>
+          <span>Languages:</span>
+          <span>Croatian (native) and English (fluent)</span>
+          <span>Other:</span>
+          <span>I have a category B driver's license.</span>
+        </div>
       </SimpleText>
     </div>
   );

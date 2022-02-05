@@ -1,20 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from '../App';
+import { App } from '../components/App';
 import { wrapComponent } from './create-app-utils';
 import { createAppGlobals } from './app-globals';
 import reportWebVitals from '../reportWebVitals';
 import { createAppContextData } from './app-context';
-import { createAppMuiTheme } from './create-app-mui-theme';
 
 export function createApp(): React.ReactElement {
   const component = <App />;
 
   const globals = createAppGlobals();
   const appContextData = createAppContextData(globals);
-  const theme = createAppMuiTheme();
 
-  return wrapComponent(component, appContextData, theme, false, '');
+  return wrapComponent(component, appContextData, false, '');
 }
 
 export function setupApp(app: React.ReactElement): void {
