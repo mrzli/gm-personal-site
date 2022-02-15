@@ -12,8 +12,6 @@ export function PersonalInfoScreen(): React.ReactElement {
           <span>Goran Mržljak</span>
           <span>Gender:</span>
           <span>Male</span>
-          <span>Date of Birth:</span>
-          <span>October 27, 1983</span>
           <span>Place of Birth:</span>
           <span>Karlovac, Croatia</span>
           <span>Nationality:</span>
