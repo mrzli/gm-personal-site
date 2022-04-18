@@ -212,7 +212,7 @@ const DATA: readonly WorkHistoryItemProps[] = [
     projects: [
       {
         description:
-          'Body animation exporter, part of a larger face and body animation systen.',
+          'Body animation exporter, part of a larger face and body animation system.',
         tech: 'C++, 3ds Max SDK.',
         role: 'I implemented the entire body animation exporter which converted 3ds Max Biped format to a format called MPEG-4 FBA.',
       },

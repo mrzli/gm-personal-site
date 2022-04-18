@@ -5,7 +5,7 @@ import profileImage from '../../assets/images/profile.jpg';
 import { LABEL_URL_PAIRS } from '../../data/label-url-pairs';
 import { Link } from 'react-router-dom';
 import Icon from '@mdi/react';
-import { mdiLinkedin, mdiGithub, mdiStackOverflow } from '@mdi/js';
+import { mdiLinkedin, mdiGithub, mdiStackOverflow, mdiFile } from '@mdi/js';
 import { GmLink } from '../reusable/GmLink';
 import { GmList } from '../reusable/GmList';
 
@@ -66,7 +66,7 @@ export function IntroScreen(): React.ReactElement {
               gridRow: 4,
               display: 'grid',
               columnGap: 10,
-              gridTemplateColumns: 'repeat(3, auto)',
+              gridTemplateColumns: 'repeat(4, auto)',
               justifyContent: 'start',
             }}
           >
@@ -90,6 +90,13 @@ export function IntroScreen(): React.ReactElement {
               openInNewTab={true}
             >
               <Icon path={mdiStackOverflow} className={'w-10 h-10'} />
+            </GmLink>
+            <GmLink
+              href={'/data/CV.pdf'}
+              classes={'text-slate-700'}
+              openInNewTab={true}
+            >
+              <Icon path={mdiFile} className={'w-10 h-10'} />
             </GmLink>
           </div>
         </div>
